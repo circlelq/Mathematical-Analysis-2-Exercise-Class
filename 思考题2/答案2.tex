@@ -1,0 +1,103 @@
+\subsection{1}
+设 $f(x)$ 在 $[0,1]$ 上严格单调下降,求证:
+\begin{enumerate}[(1)]
+	\item $\exists \theta \in(0,1)$ 使得 $\int_{0}^{1} f(x) \dif x=\theta f(0)+(1-\theta) f(1)$;
+	\item $\forall c>f(0),\ \exists \theta \in(0,1)$ 使得 $\int_{0}^{1} f(x) \dif x=\theta c+(1-\theta) f(1)$.
+\end{enumerate}
+
+\begin{proof}
+	~
+	\begin{enumerate}[(1)]
+		\item  $\int_{0}^{1} f(x) \dif x=f(0) \int_{0}^{\theta} \dif x+f(1) \int_{\theta}^{1} \dif x=\theta f(0)+(1-\theta) f(1)$.
+		\item 由(1)可知 $\exists \theta_{1} \in(0,1) \int_{0}^{1} f(x) \dif x=\theta_{1} f(0)+\left(1-\theta_{1}\right) f(1)$.
+
+		要证 $\exists \theta_{2} \in(0,1)$ 使得 $\int_{0}^{1} f(x) \dif x=\theta_{2} c+\left(1-\theta_{2}\right) f(1)$,
+		
+		即证$\exists \theta_{2} \in(0,1)$ 使得 $\theta_{1} f(0)+\left(1-\theta_{1}\right) f(1)=\theta_{2} c+\left(1-\theta_{2}\right) f(1)$
+		取 $\theta_{2}=\frac{f(0)-f(1)}{c-f(1)} \theta_{1}$ 即可, $\theta_{2} \in(0,1)$.
+	\end{enumerate}
+
+\end{proof}
+
+\subsection{2}
+
+设 $F(x)$ 是 $[0,+\infty)$ 上单调增加的正值函数, $y$ 是微分方程 $y^{\prime \prime}+F(x) y=0$ 的解.
+
+求证:
+$y$ 在 $[0,+\infty)$ 上有界.
+
+\begin{proof}
+	由 $y^{\prime \prime}+F(x) y=0$ 可得
+
+\begin{equation}
+	\frac{1}{F(x)} y^{\prime} y^{\prime \prime}+y y^{\prime}=0,
+\end{equation}
+即
+\begin{equation}
+	\frac{1}{F(x)} \frac{\dif\left(y^{\prime}\right)^{2}}{\dif x}+\frac{\dif y^{2}}{\dif x}=0.
+\end{equation}
+\begin{align}
+	y^{2}(x)&=y^{2}(0)-\int_{0}^{x} \frac{1}{F(t)} \frac{\dif \left(y^{\prime}\right)^{2}}{\dif t} \dif t \\
+	&=y^{2}(0)-\frac{1}{F(0)} \int_{0}^{\xi} \frac{\dif \left(y^{\prime}\right)^{2}}{\dif t} \dif t \\
+	&=y^{2}(0)-\frac{1}{F(0)}\left[\left(y^{\prime}(\xi)^{2}-y^{\prime}(0)^{2}\right]\right. \\
+	&\leqslant y^{2}(0)+\frac{1}{F(0)} y^{\prime}(0)^{2}.
+\end{align}
+其中$\xi \in [0,x]$.
+
+
+\end{proof}
+
+
+\subsection{3}
+
+
+求 $F(x)=\int_{0}^{x} \cos \frac{1}{t} \dif t$ 在原点的导数 $F^{\prime}(0)$.
+\begin{equation}
+	F^{\prime}(0)=\lim _{x \rightarrow 0} \frac{F(x)}{x}=\lim _{x \rightarrow 0} \frac{F(2 x)}{2 x}=\lim _{x \rightarrow 0} \frac{F(2 x)-F(x)}{x},
+\end{equation}
+\begin{align}
+	F(2 x)-F(x)&=\int_{x}^{2 x} \cos \frac{1}{t} \dif t \\
+	&=\int_{\frac{1}{2 x}}^{\frac{1}{x}} \frac{1}{t^{2}} \cos t \dif t \\
+	&=4 x^{2} \int_{\frac{1}{2 x}}^{c} \cos t \dif t \\
+	&=4 x^{2}\left(\sin c-\sin \frac{1}{2 x}\right).
+\end{align}
+
+\begin{equation}
+F^{\prime}(0)=\lim _{x \rightarrow 0} \frac{F(2 x)-F(x)}{x}=\lim _{x \rightarrow 0} 4 x\left(\sin c-\sin \frac{1}{2 x}\right)=0.
+\end{equation}
+
+另:
+\begin{align}
+	& \int_{0}^{x} \cos \frac{1}{t} \dif t \\
+	= & \int^\infty_{\frac{1}{x}} \frac{\cos u}{u^2} \dif u \\
+	= & \lim_{M \to +\infty} \int^M_\frac{1}{x} \frac{\cos u}{u^2}\dif u\\
+	= & x^2 \lim_{M \to +\infty} \int^\xi_\frac{1}{x} {\cos u}\dif u\quad \left(\xi \in \left[\frac{1}{x},M \right] \right)\\
+	= & \mathcal{O}(x^2).
+\end{align}
+\begin{equation}
+	F^{\prime}(0)=\lim _{x \rightarrow 0} \frac{F(x)}{x}=\lim _{x \rightarrow 0}  \mathcal{O}(x)=0.
+\end{equation}
+
+
+\subsection{4}
+
+若 $f(x)$ 在 $[a,+\infty)$ 上单调下降,且积分 $\int_{a}^{+\infty} f(x) \dif x$ 收敛.
+
+求证: $\lim \limits_{x \rightarrow \infty} x f(x)=0$.
+
+\begin{proof}
+	由收敛原理,
+
+	当$\eta \rightarrow+\infty$ 有 
+	\begin{equation}
+		\int_{a}^{2 \eta} f(x) \dif x-\int_{a}^{\eta} f(x) \dif x=\int_{\eta}^{2 \eta} f(x) \dif x \rightarrow 0.
+	\end{equation}
+	$f(x)$ 在 $[a,+\infty)$ 上单调下降,
+\begin{equation}
+	\therefore \int_{\eta}^{2 \eta} f(x) \dif x \leqslant \int_{\eta}^{2 \eta} f(\eta) \dif x=f(\eta) \eta=2 \int_{\eta / 2}^{\eta} f(\eta) \dif x \leqslant 2 \int_{\eta / 2}^{\eta} f(x) \dif x.
+\end{equation}
+	由夹挤原理即有
+	\begin{equation}
+		\therefore \lim _{x \rightarrow \infty} x f(x)=0.
+	\end{equation}
+\end{proof}
