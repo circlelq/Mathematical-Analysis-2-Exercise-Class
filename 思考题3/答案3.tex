@@ -1,0 +1,108 @@
+\subsection{1}
+设 $\int_{a}^{+\infty} f(x) \dif x$ 收敛, $x f(x)$ 在 $[a,+\infty)$ 上单调下降.
+
+求证:
+\begin{enumerate}[(1)]
+	\item $x f(x) \geqslant 0,\ (x \geqslant a) ;$
+	\item $\lim \limits_{x \rightarrow+\infty} x f(x) \ln x=0$.
+\end{enumerate}
+\begin{proof}
+	~
+	\begin{enumerate}[(1)]
+		\item $\because \int_{a}^{+\infty} f(x) \dif x$ 收敛,
+		
+		$\therefore H \to +\infty,\ \int_{H}^{2 H} f(x) \dif x \rightarrow 0$.
+		\begin{align}
+		\int_{H}^{2 H} f(x) \dif x &=\int_{H}^{2 H} x f(x) \cdot \frac{1}{x} \dif x \\
+		&=H f(H) \int_{H}^{c} \frac{1}{x} \dif x+2 H f(2 H) \int_{c}^{2 H} \frac{1}{x} \dif x \\
+		&=H f(H)(\ln c-\ln H)+2 H f(2 H)(\ln 2 H-\ln c) \\
+		&=(H f(H)-2 H f(2 H)) \ln c-H f(H) \ln H+2 H f(2 H) \ln 2 H \\
+		&=(H f(H)-2 H f(2 H))(\ln c-\ln H)+2 H f(2 H) \ln 2.
+		\end{align}
+		若 $\exists x^{*}$ 使得 $x^{*} f\left(x^{*}\right)=\zeta<0$, 由单调性 $\forall x>x^{*},$ 有 $x f(x)<0$. 当$H=x^*$时,
+		\begin{align}
+		\int_{H}^{2 H} f(x) \dif x &=(H f(H)-2 H f(2 H))(\ln c-\ln H)+2 H f(2 H) \ln 2 \\
+		& \leqslant (H f(H)-2 H f(2 H)) \ln 2+2 H f(2 H) \ln 2 \\
+		&=H f(H) \ln 2 \\
+		&=\zeta \ln 2.
+		\end{align}
+		与积分收敛矛盾,
+		因此 $x f(x) \geqslant 0,(x \geqslant a)$ .
+
+		另: 也可直接得
+		\begin{align}
+		\int_{H}^{2 H} f(x) \dif x &=\int_{H}^{2 H} x f(x) \cdot \frac{1}{x} \dif x \\
+		& \leqslant  \int_{H}^{2 H} H f(H) \cdot \frac{1}{x} \dif x \\
+		&=H f(H) \ln 2 \\
+		& \leqslant  \zeta \ln 2.
+		\end{align}
+		\item 由收敛有 $H \rightarrow+\infty,\ \int_{H}^{H^{2}} f(x) \dif x \rightarrow 0$,\
+		$x f(x) \geqslant 0(x \geqslant a)$,
+		\begin{equation}
+			\int_{H}^{H^{2}} f(x) \dif x=\int_{H}^{H^{2}} x f(x) \cdot \frac{1}{x} \dif x \geqslant \frac{1}{2} H^{2} f\left(H^{2}\right) \ln H^{2} \geqslant 0.
+		\end{equation}
+		$\therefore x f(x) \ln x \rightarrow 0$.
+	\end{enumerate}
+
+\end{proof}
+
+\subsection{2}
+
+设 $f(x)$ 在 $[0,+\infty)$ 上连续,且 $\lim \limits_{x \rightarrow+\infty} f(x)=f(+\infty)$ 存在.
+
+求证:
+\begin{equation}
+	\int_{0}^{+\infty} \frac{f(a x)-f(b x)}{x} \dif x=[f(0)-f(+\infty)] \ln \frac{b}{a},\ (b>a>0).
+\end{equation}
+
+\begin{proof}
+	
+	考虑 $\int_{c_{1}}^{c_{2}} \frac{f(a x)-f(b x)}{x} \dif x,\ c_{1} \rightarrow 0,\ c_{2} \rightarrow+\infty,$
+
+其中
+\begin{equation}
+	\int_{c_{1}}^{c_{2}} \frac{f(a x)}{x} \dif x=\int_{c_{1}}^{c_{2}} \frac{f(a x)}{a x} \dif \ (a x)=\int_{a c_{1}}^{a c_{2}} \frac{f(x)}{x} \dif x,
+\end{equation}
+同理
+\begin{equation}
+	\int_{c_{1}}^{c_{2}} \frac{f(b x)}{x} \dif x=\int_{b c_{1}}^{b c_{2}} \frac{f(x)}{x} \dif x,
+\end{equation}
+则
+\begin{align}
+\int_{c_{1}}^{c_{2}} \frac{f(a x)-f(b x)}{x} \dif x &=\int_{a c_{1}}^{a c_{2}} \frac{f(x)}{x} \dif x-\int_{b c_{1}}^{b c_{2}} \frac{f(x)}{x} \dif x \\
+&=\int_{a c_{1}}^{b c_{1}} \frac{f(x)}{x} \dif x-\int_{a c_{2}}^{b c_{2}} \frac{f(x)}{x} \dif x \\
+&=f(\xi) \int_{a c_{1}}^{b c_{1}} \frac{1}{x} \dif x-f(\eta) \int_{a c_{2}}^{b c_{2}} \frac{1}{x} \dif x \\
+&=(f(\xi)-f(\eta)) \ln \frac{b}{a}.
+\end{align}
+其中$\xi \in\left(a c_{1}, b c_{1}\right), \eta  \in\left(a c_{2}, b c_{2}\right).$
+
+$c_{1} \rightarrow 0^+, c_{2} \rightarrow+\infty,  \text { 即有 } $
+\begin{equation}
+	\int_{0}^{+\infty} \frac{f(a x)-f(b x)}{x} \dif x=[f(0)-f(+\infty)] \ln \frac{b}{a}.
+\end{equation}
+
+\end{proof}
+
+\subsection{3}
+
+设 $f(x)$ 在 $[a,+\infty)$ 上一致连续,且 $\int_{a}^{+\infty} f(x) \dif x$ 收敛.
+
+求证: $\lim \limits_{x \rightarrow+\infty} f(x)=0$.
+
+\begin{proof}
+设 $f(x)$ 不收敛于 $0,$ 则
+$$
+\exists \varepsilon>0,\ \forall N,\ \exists x_{0}>N,\ \mathrm{s.t.} \left|f\left(x_{0}\right)\right|>\varepsilon.
+$$
+
+由一致连续性, $\exists \delta >0,$ 当$\abs{x-x_0}<\delta$时, 有$\abs{f(x)-f(x_0)}<\frac{\varepsilon}{2}$, 即 $-\frac{\varepsilon}{2}<{f(x)-f(x_0)}<\frac{\varepsilon}{2}$.
+
+$\text { 若 } f\left(x_{0}\right)>\varepsilon, \text { 则 } f(x)>f\left(x_{0}\right)-\frac{\varepsilon}{2}>\frac{\varepsilon}{2} ;$
+
+$\text { 若 } f\left(x_{0}\right)<-\varepsilon, \text { 则 } f(x)<f\left(x_{0}\right)+\frac{\varepsilon}{2}<-\frac{\varepsilon}{2}$.
+
+$\text { 则有 } \int_{x_{0}}^{x_{0}+\delta} f(x) \dif x>\frac{\varepsilon \delta}{2} \text { 或 } \int_{x_{0}}^{x_{0}+\delta} f(x) \dif x<-\frac{\varepsilon \delta}{2}, \text { 与 } \int_{a}^{+\infty} f(x) \dif x \text { 收敛矛盾. }$
+
+$\therefore \lim \limits_{x \rightarrow+\infty} f(x)=0$.
+
+\end{proof}
