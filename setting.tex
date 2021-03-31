@@ -7,7 +7,7 @@
 \usepackage{fancyhdr}
 \usepackage{fancyref}
 \usepackage{commath}%定义d
-\usepackage[UTF8]{ctex}
+\usepackage[UTF8,scheme = chinese]{ctex}
 \usepackage{geometry}   
 \usepackage{bm}
 \usepackage{fontawesome}
@@ -34,7 +34,12 @@
 \usepackage{asymptote}%draw picture
 \usepackage[perpage]{footmisc}%脚注每页清零
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\renewcommand{\proofname}{\indent \sf \bfseries{证明}}
 
+\catcode`\。=\active   
+\catcode`\，=\active  
+\newcommand{。}{．}
+\newcommand{，}{,}
 
 % \setmainfont{TimesNewRomanPSMT}
 % \setsansfont{Helvetica-Light}
