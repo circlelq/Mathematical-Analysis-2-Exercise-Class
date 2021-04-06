@@ -1,0 +1,102 @@
+
+\subsection{1}
+
+设 $f_{x}(x, y)$ 在 $\left(x_{0}, y_{0}\right)$ 存在， $f_{y}(x, y)$ 在 $\left(x_{0}, y_{0}\right)$ 连续。
+
+求证: $f(x, y)$ 在 $\left(x_{0}, y_{0}\right)$ 可微。
+
+\begin{proof}
+	
+
+\begin{align}
+f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right) =&f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}+\Delta x, y_{0}\right)\\
+&+f\left(x_{0}+\Delta x, y_{0}\right)-f\left(x_{0}, y_{0}\right) \\
+=&f_y\left(x_{0}+\Delta x, y_{0}+\theta \Delta y\right) \Delta y+f_x\left(x_{0}, y_{0}\right) \Delta x+o(\Delta x) \\
+=&f_y\left(x_{0}, y_{0}\right) \Delta y+\alpha \Delta y+f_x\left(x_{0}, y_{0}\right) \Delta x+o(\Delta x),
+\end{align}
+其中$\alpha=f_y\left(x_{0}+\Delta x, y_{0}+\theta \Delta y\right)-f_y\left(x_{0}, y_{0}\right), \quad 0<\theta<1$ 
+
+当$\Delta x, \Delta y \rightarrow 0 \text { 时, } \alpha \rightarrow 0 $,
+
+$\therefore  \lim \limits_{\Delta x \rightarrow 0, \Delta y \rightarrow 0} \alpha \Delta y / \sqrt{\Delta x^{2}+\Delta y^{2}}=0 $.
+
+$\therefore \alpha \Delta y=o\left(\sqrt{\Delta x^{2}+\Delta y^{2}}\right) $.
+
+$\therefore f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)=f_y\left(x_{0}, y_{0}\right) \Delta y+f_x\left(x_{0}, y_{0}\right) \Delta x+o\left(\sqrt{\Delta x^{2}+\Delta y^{2}}\right)$.
+
+\end{proof}
+
+
+附: 二元函数 $f(x, y)$ 在 $\left(x_{0}, y_{0}\right)$ 连续，则在 $\left(x_{0}, y_{0}\right)$ 临域内由
+\begin{align}
+\left|f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}+\Delta x, y_{0}\right)\right| \leq &\left|f\left(x_{0}+\Delta x, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)\right| \\
+&+\left|f\left(x_{0}+\Delta x, y_{0}\right)-f\left(x_{0}, y_{0}\right)\right|
+\end{align}
+可得 $f\left(x_{0}+\Delta x, y\right)$ 在 $\left(x_{0}+\Delta x, y_{0}\right)$ 关于 ${y}$ 连续.
+
+\subsection{2}
+
+若函数 $f(x, y, z)$ 对任意正实数 ${t}$ 满足关系 $f(t x, t y, t z)=t^{n} f(x, y, z),$ 则称 $f(x, y, z)$ 为
+${n}$ 次齐次函数。设 $f(x, y, z)$ 可微。
+
+证明: $f(x, y, z)$ 为 ${n}$ 次齐次函数的充要条件是
+$x \frac{\partial f}{\partial x}+y \frac{\partial f}{\partial y}+z \frac{\partial f}{\partial z}=n f(x, y, z)$。
+
+\begin{proof}
+	~
+\begin{enumerate}[(1)]
+	\item 必要性
+	对任意固定参数 $X, Y, Z$,
+	设 $x=X t,\ y=Y t,\ z=Z t$,
+\begin{equation}
+	f(x, y, z)=f(X t, Y t, Z t)=t^{n} f(X, Y, Z),
+\end{equation}
+\begin{equation}
+	\frac{\dif f}{\dif t}=\frac{\partial f}{\partial x} X+\frac{\partial f}{\partial y} Y+\frac{\partial f}{\partial z} Z=n t^{n-1} f(X, Y, Z),
+\end{equation}
+\begin{equation}
+	\frac{\partial f}{\partial x} X t+\frac{\partial f}{\partial y} Y t+\frac{\partial f}{\partial z} Z t=n t^{n} f(X, Y, Z),
+\end{equation}
+即
+\begin{equation}
+	x \frac{\partial f}{\partial x}+y \frac{\partial f}{\partial y}+z \frac{\partial f}{\partial z}=n f(x, y, z).
+\end{equation} 
+
+
+\item 充分性
+对任意固定 $x,y,z$
+
+$\text { 设 } X=x t,\ Y=y t,\ Z=z t$,
+\begin{align}
+f(X, Y, Z)=& f(t x, t y, t z), \\
+\frac{\dif f(X, Y, Z)}{\dif t} &=\frac{\partial f}{\partial X} x+\frac{\partial f}{\partial Y} y+\frac{\partial f}{\partial Z} z, \\
+&=\frac{\partial f}{\partial X} \frac{X}{t}+\frac{\partial f}{\partial Y} \frac{Y}{t}+\frac{\partial f}{\partial Z} \frac{Z}{t}, \\
+&=\frac{1}{t} n f(X, Y, Z). \\
+\therefore f(X, Y, Z) &=C t^{n}.
+\end{align}
+令 $t=1$ 可得 $C=f(x, y, z)$,
+即 $f(x t, y t, z t)=t^{n} f(x, y, z)$.
+\end{enumerate}
+
+\end{proof}
+
+
+
+
+\subsection{3}
+
+设 $f(x, y)$ 在区域 ${D}$ 上满足 $f_{x}(x, y) \equiv 0$。
+
+问: $f(x, y)$ 在 ${D}$ 上能否表示为 $\varphi(y)$。
+
+不能。可举反例: 
+\begin{equation}
+	f(x, y)=
+	\begin{cases}
+		\operatorname{sgn}(x) y^{2}\qquad&(x \neq 0, y>0)\\
+		0\qquad&(y \leq 0)
+	\end{cases}
+\end{equation}
+
+若对于区域内任意 $y=y_{0},\ x$ 的定义域是连续的（凸区域即满足此条件）, 则可由
+$f(x, y)=f\left(x_{0}, y\right)+f_{x}\left(x_{0}+\theta \Delta x, y\right) \Delta x=f\left(x_{0}, y\right)$ 得 $f(x, y)$ 在 ${D}$ 上能表示为 $\varphi(y)$。
