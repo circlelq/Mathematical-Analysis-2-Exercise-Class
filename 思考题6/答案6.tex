@@ -1,0 +1,71 @@
+
+\subsection{1}
+
+设可微函数 $u=f(x, y)$ 满足方程 $x \frac{\partial f}{\partial x}+y \frac{\partial f}{\partial y}=0.$
+
+证明: $f(x, y)$ 在极坐标系里除原点的全空间只是 $\theta$ 的函数.
+
+\begin{proof}
+令 $x=r \cos \theta,\ y=r \sin \theta$,
+\begin{equation}
+	\frac{\partial f}{\partial r}=\frac{\partial f}{\partial x} \cos \theta+\frac{\partial f}{\partial y} \sin \theta=\frac{1}{r}\left(\frac{\partial f}{\partial x} r \cos \theta+\frac{\partial f}{\partial y} r \sin \theta\right)=\frac{1}{r}\left(\frac{\partial f}{\partial x} x+\frac{\partial f}{\partial y} y\right)=0.
+\end{equation}
+
+$\therefore f(x, y)$ 是 $\theta$ 的函数.
+
+若题中 $u=f(x, y) \in C^{1}(D) ,\  D$ 为含原点的凸区域，则 $f(x, y)$ 在 $D$ 上为一常数。
+由 $u=f(x, y) \in C^{1}(D)$ 可得 ${r}=0$ 时, $\frac{\partial f}{\partial r}=0$.
+
+由有限增量定理
+\begin{equation}
+	f(x, y)=f(r \cos \theta, r \sin \theta)=g(r, \theta)=g_{0}+g_{r}(\lambda r, \theta) r=g_{0}=f(0,0),
+\end{equation}
+其中 $g(r, \theta)=f(r \cos \theta, r \sin \theta),\ \frac{\partial g}{\partial r}=\frac{\partial f}{\partial r}=0,\  {r}=0$ 时, $g(r, \theta)=g_{0}=f(0,0)$.
+
+\end{proof}
+
+
+
+\subsection{2}
+
+设二元函数 $F(x, y)=f(x) g(y),$ 在极坐标系可表示为 $F(x, y)=S(r),$ 求 $F(x, y)$ .
+
+
+{\sf\bfseries{解}}: 令 $x=r \cos \theta, y=r \sin \theta$
+
+$\because F(x, y)=S(r)$,
+
+$\therefore $
+\begin{equation}
+	\frac{\partial F}{\partial \theta}=-\frac{\partial F}{\partial x} r \sin \theta+\frac{\partial F}{\partial y} r \cos \theta=-y \frac{\partial F}{\partial x}+x \frac{\partial F}{\partial y}=0.
+\end{equation}
+
+即 $y f^{\prime}(x) g(y)=x f(x) g^{\prime}(y)$
+\begin{equation}
+	\frac{f^{\prime}(x)}{x f(x)}=\frac{g^{\prime}(y)}{y g(y)}=C,	
+\end{equation}
+可得 $f(x)=C_{1} \me^{\frac{C}{2} x^{2}},\ g(y)=C_{2} \me^{\frac{C}{2} y^{2}}$,\ $F(x, y)=f(x) g(y)=C_{3} \me^{C_{4}\left(x^{2}+y^{2}\right)}$.
+
+
+
+
+\subsection{3}
+
+函数 ${u}$ 满足 $u u_{x y}=u_{x} u_{y}.$
+
+
+求证: $u(x, y)=f(x) g(y)$.
+\begin{proof}
+由已知
+\begin{align}
+\frac{\partial u_{x}}{u_{x} \partial y}&=\frac{\partial u}{u \partial y},\\
+\frac{\partial \ln u_{x}}{\partial y}&=\frac{\partial \ln u}{\partial y}, \\
+\ln u_{x}&=\ln u+c(x), \\
+u_{x}&=u C(x),\\
+\frac{\partial \ln u}{\partial x}&=C(x),\\
+\ln u&=F(x)+G(y),\\
+ u(x, y)&=f(x) g(y).
+\end{align}
+\end{proof}
+
+

@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\input{../setting.tex}
+\setcounter{secnumdepth}{2}
+\setlength{\parindent}{0em}
+
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={参考答案4}
+}
+
+\title{
+		\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{\LARGE Peking University}\\[1cm] % Name of your university/college \\ [25pt]
+		\horrule{0.5pt} \\[0.5cm]
+		\huge \bfseries{参考答案4} \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+		\href{mailto:yuanlq@pku.edu.cn}{\faEnvelope}  \quad \emph{袁磊祺}  \\	\normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+
+
+\maketitle
+
+\subsection{16.1.2}
+
+\begin{enumerate}[(1)]
+	\item $u=\sqrt[z]{\frac{x}{y}}$ at $(1,1,1)$.
+	\par $\pd{u}{x}(1,1,1)=\frac{\dif x}{\dif x}\big|_{x = 1} = 1. $
+	\par $\pd{u}{y}(1,1,1)=\left(\frac{1}{ y}\right)'\big|_{y = 1} = -1. $
+	\par $\pd{u}{z}(1,1,1)=\frac{\dif 1}{\dif z}\big|_{z = 1} = 0. $
+	\item $z=x+(y-1)\arcsin \frac{x}{y}$ at $(0,1)$.
+	\par $\pd{z}{x}(0,1)=\frac{\dif x}{\dif x}\big|_{x = 0} = 1. $
+	\par $\pd{z}{y}(0,1)=\frac{\dif 0}{\dif y}\big|_{y = 1} = 0. $
+	\item $u=\arctan \frac{x+y+z-xyz}{1-xy-xz-yz}$ at $(0,0,0)$.
+	\par $\pd{u}{x}(0,0,0)=\left(\arctan x\right)'\big|_{x = 0} = 1. $
+	\par $\pd{u}{y}(0,0,0)=\left(\arctan y\right)'\big|_{y = 0} = 1. $
+	\par $\pd{u}{z}(0,0,0)=\left(\arctan z\right)'\big|_{z = 0} = 1 . $
+
+\end{enumerate}
+
+\subsection{16.1.3}
+
+$u=\ln (1+x_1+x_2^2+x^2_3)$.
+\par $u_{x_1} = \frac{1}{1+x_1+x^2_2+x^2_3}$,
+\par $u_{x_2} = \frac{2x_2}{1+x_1+x^2_2+x^2_3}$,
+\par $u_{x_3} = \frac{2x_3}{1+x_1+x^2_2+x^2_3}$,
+\par $\therefore \sum \limits_{i=1}^3u_{x_i}(1,1,1) = \frac{5}{4}. $
+
+
+\subsection{16.1.7}
+
+$z=x^nf\left(\frac{y}{x^2}\right)$,
+\par $\pd{z}{x}=nx^{n-1}f\left(\frac{y}{x^2}\right)-2\frac{yx^n}{x^3}f'\left(\frac{y}{x^2}\right)$,
+\par $\pd{z}{y}=x^{n}f\left(\frac{y}{x^2}\right)\frac{1}{x^2}$,
+\par $x\pd{z}{x}+2y\pd{z}{y} = nx^nf\left(\frac{y}{x^2}\right)=nz$.\qed
+
+\subsection{16.2.4}
+
+$u(x+h,y+k)-u(x,y)=Ah+Bk+o(\sqrt{h^2+k^2})$,
+\par $v(x+h,y+k)-v(x,y)=Ch+Dk+o(\sqrt{h^2+k^2})$.
+\par $\Delta uv = u(x+h,y+k)v(x+h,y+k) - u(x,y)v(x,y)$
+\par $\phantom{\Delta uv}=[ u(x+h,y+k)v(x+h,y+k) - u(x,y) v(x+h,y+k) ]+[ u(x,y)v(x+h,y+k) - \phantom{\Delta uv=\ }u(x,y)v(x,y) ]$
+\par $\phantom{\Delta uv}=[ (Ah+Bk)v(x+h,y+k) + v(x+h,y+k) o(\sqrt{h^2+k^2})  ]+[ u(x,y)(Ch+Dk) + \phantom{\Delta uv=\ }u(x,y) o(\sqrt{h^2+k^2}) ]$,
+\par $\because \lim \limits_{\sqrt{h^2+k^2} \to 0} v(x+h,y+k)= v(x,y),$
+\par $\therefore \dif \, (uv) = v\dif u + u \dif v.$\qed
+
+\subsection{16.2.15}
+
+\begin{enumerate}[(1)]
+	\item $\dif u=a x \dif x+b y \dif y,$
+	\par $u=\frac{1}{2} a x^{2}+\frac{1}{2} b y^{2}+c$.
+	\item $\dif u=(x^{2}+2 x y-y^{2}) \dif x+(x^{2}-2 x y-y^{2}) \dif y $,
+	\par $u=\frac{1}{3} x^{3}+x^{2} y-y^{2} x-\frac{1}{3} y^{3}+c$.
+	\item $\dif u=(5 x^{4}+3 x y^{2}-y^{3}) \dif x+(3x^2y-3xy^2+y^2)\dif y,$
+	\par $u=x^{5}+\frac{3}{2} x^{2} y^{2}-y^{3} x+\frac{1}{3} y^{3}+c.$
+\end{enumerate}
+
+
+
+\subsection{16.3.2}
+
+\begin{enumerate}[(1)]
+	\item[(1)] $u=f(\sqrt{x^2+y^2})$,
+	\par $\pd{u}{x} = f'(\sqrt{x^2+y^2})\frac{x}{\sqrt{x^2+y^2}}$,
+	\par $\pd{u}{y} = f'(\sqrt{x^2+y^2})\frac{y}{\sqrt{x^2+y^2}}$.
+	\item[(3)] $u=f(\frac{xz}{y})$,
+	\par $\pd{u}{x} = f'(\frac{xz}{y})\frac{z}{y},$,
+	\par $\pd{u}{y} = -f'(\frac{xz}{y})\frac{xz}{y^2}$,
+	\par $\pd{u}{z} = f'(\frac{xz}{y})\frac{x}{y}$.
+	\item[(5)] $u=f(x,xy,xyz)$,
+	\par $\pd{u}{x} = f_x(x,xy,xyz)+f_y(x,xy,xyz)y+f_z(x,xy,xyz)yz$,
+	\par $\pd{u}{y} = f_y(x,xy,xyz)x+f_z(x,xy,xyz)xz$,
+	\par $\pd{u}{z} = f_z(x,xy,xyz)xy$.
+	\item[(7)] $u=f(x+y+z,x^2+y^2+z^2)$,
+	\par $\pd{u}{x}=f_x(x+y+z,x^2+y^2+z^2)+f_y(x+y+z,x^2+y^2+z^2)2x$,
+	\par $\pd{u}{y}=f_x(x+y+z,x^2+y^2+z^2)+f_y(x+y+z,x^2+y^2+z^2)2y$,
+	\par $\pd{u}{z}=f_x(x+y+z,x^2+y^2+z^2)+f_y(x+y+z,x^2+y^2+z^2)2z$.
+	\item[(9)] $u=f(x^2+y^2,x^2-y^2,2xy)$,
+	\par $\pd{u}{x}=f_x(x^2+y^2,x^2-y^2,2xy)2x+f_y(x^2+y^2,x^2-y^2,2xy)2x+f_z(x^2+y^2,x^2-y^2,2xy)2y$,
+	\par $\pd{u}{y}=f_x(x^2+y^2,x^2-y^2,2xy)2y-f_y(x^2+y^2,x^2-y^2,2xy)2y+f_z(x^2+y^2,x^2-y^2,2xy)2x$.
+\end{enumerate}
+
+
+
+\subsection{16.4.1}
+
+$\pd{u}{\bm{l}}\big|_{(x_0,y_0)}$.
+
+\begin{enumerate}[(1)]
+	\item $\pd{u}{x}\big|_{(1,1)}=2x\big|_{(1,1)}=2$,
+	\par $\pd{u}{y}\big|_{(1,1)}=-2y\big|_{(1,1)}=-2$,
+	\par $\pd{u}{\bm{l}}\big|_{(1,1)}=2\cos \frac{\pi}{3}-2\cos \frac{\pi}{6}=1-\sqrt{3}$.
+	\item $\pd{u}{\bm{l}}\big|_{(1,1)}=\pd{u}{x}\big|_{(1,1)} \cos \frac{\pi}{3}\pm\pd{u}{y}\big|_{(1,1)}\cos \frac{\pi}{6}=\frac{1}{2}\pm 
+	\frac{\sqrt{3}}{2}$.
+	\item $\pd{u}{\bm{l}}\big|_{(1,1)}=\pd{u}{x}\big|_{(1,1)} \cos \frac{\pi}{4}+\pd{u}{y}\big|_{(1,1)}\cos \frac{\pi}{4}=2\me\frac{\sqrt{2}}{2}+\me \frac{\sqrt{2}}{2}=\frac{3\sqrt{2}}{2}\me$.
+\end{enumerate}
+
+
+\subsection{16.4.2}
+
+$\pd{u}{\bm{l}}\big|_{(x_0,y_0,z_0)}$.
+
+
+\begin{enumerate}[(1)]
+	\item $\cos \alpha = \frac{1}{\sqrt{6}},\ \cos \beta = - \frac{1}{\sqrt{6}},\ \cos \gamma = \frac{2}{\sqrt{6}}.$
+	\par $\pd{u}{\bm{l}}\big|_{(1,1,0)}=\pd{u}{x}\big|_{(1,1,0)} \cos \alpha +\pd{u}{y}\big|_{(1,1,0)}\cos \beta+\pd{u}{z}\big|_{(1,1,0)}\cos \gamma =\frac{2}{\sqrt{6}}-\frac{4}{\sqrt{6}}=-\frac{\sqrt{6}}{3}$.
+	\item $\cos \alpha = \frac{2}{\sqrt{6}},\ \cos \beta = \frac{1}{\sqrt{6}},\ \cos \gamma =- \frac{1}{\sqrt{6}}.$
+	\par $\pd{u}{\bm{l}}\big|_{(1,1,1)}=\pd{u}{x}\big|_{(1,1,1)} \cos \alpha +\pd{u}{y}\big|_{(1,1,1)}\cos \beta+\pd{u}{z}\big|_{(1,1,1)}\cos \gamma =\frac{2}{\sqrt{6}}-\frac{1}{\sqrt{6}}=\frac{\sqrt{6}}{6}$.
+\end{enumerate}
+
+
+
+\end{document}
