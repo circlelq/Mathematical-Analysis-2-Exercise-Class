@@ -1,0 +1,100 @@
+\subsection{1}
+
+设 $f$ 可微，证明曲面 $f\left(\frac{z}{y}, \frac{x}{z}, \frac{y}{x}\right)=0$ 上任一点的切平面均过某一定点。
+
+\begin{proof}
+	设 $u=\frac{z}{y}, v=\frac{x}{z}, w=\frac{y}{x}$
+
+	考虑任一点 $\left(x_{0}, y_{0}, z_{0}\right)$ 处的切平面，法向为
+	\begin{equation}
+		\left(f_{v}^{\prime} \frac{1}{z_{0}}-f_{w}^{\prime} \frac{y_{0}}{x_{0}^{2}}, f_{w}^{\prime} \frac{1}{x_{0}}-f_{u}^{\prime} \frac{z_{0}}{y_{0}^{2}}, f_{u}^{\prime} \frac{1}{y_{0}}-f_{v}^{\prime} \frac{x_{0}}{z_{0}^{2}}\right),
+	\end{equation}
+	切平面为
+	\begin{equation}
+		\left(f_{v}^{\prime} \frac{1}{z_{0}}-f_{w}^{\prime} \frac{y_{0}}{x_{0}^{2}}\right)\left(x-x_{0}\right)+\left(f_{w}^{\prime} \frac{1}{x_{0}}-f_{u}^{\prime} \frac{z_{0}}{y_{0}^{2}}\right)\left(y-y_{0}\right)+\left(f_{u}^{\prime} \frac{1}{y_{0}}-f_{v}^{\prime} \frac{x_{0}}{z_{0}^{2}}\right)\left(z-z_{0}\right)=0,
+	\end{equation}
+	即 
+	\begin{equation}
+		\left(f_{v}^{\prime} \frac{1}{z_{0}}-f_{w}^{\prime} \frac{y_{0}}{x_{0}^{2}}\right) x+\left(f_{w}^{\prime} \frac{1}{x_{0}}-f_{u}^{\prime} \frac{z_{0}}{y_{0}^{2}}\right) y+\left(f_{u}^{\prime} \frac{1}{y_{0}}-f_{v}^{\prime} \frac{x_{0}}{z_{0}^{2}}\right) z=0,
+	\end{equation}
+	必过 $(0,0,0)$ 点.
+\end{proof}
+
+
+
+\subsection{2}
+
+
+求椭球面 $\frac{x^{2}}{4}+\frac{y^{2}}{6}+\frac{z^{2}}{8}=1$ 上法线与平面 $x+2 y+z=100$ 垂直的点.
+
+
+考虑任一点 $\left(x_{0}, y_{0}, z_{0}\right)$ 处的法向为
+\begin{equation}
+	\left(\frac{x_0}{2},\frac{y_0}{3},\frac{z_0}{4}\right).
+	\label{eq:21}
+\end{equation}
+
+平面 $x+2 y+z=100$ 的法向为
+\begin{equation}
+	(1,2,1).
+	\label{eq:22}
+\end{equation}
+
+若椭球面上法线与平面垂直，则\cref{eq:21,eq:22}平行
+\begin{equation}
+	\frac{\frac{x_0}{2}}{1}=\frac{\frac{y_0}{3}}{2}=\frac{\frac{z_0}{4}}{1}.
+	\label{eq:23}
+\end{equation}
+将\cref{eq:23}代入
+\begin{equation}
+	\frac{x^{2}}{4}+\frac{y^{2}}{6}+\frac{z^{2}}{8}=1
+\end{equation}
+解得
+\begin{equation}
+	a = \left(\frac{2}{3},2,\frac{4}{3}\right),\quad b = \left(-\frac{2}{3},-2,-\frac{4}{3}\right).
+\end{equation}
+
+
+
+\subsection{3}
+
+求曲面 $\left\{\begin{array}{c}x+y+z=0 \\ \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1\end{array}\right.$ 交线的切线, 以及 $a, b, c$ 满足什么条件时, 交线的副法向与椭球面的法向正交?
+
+考虑交线上任一点 $\left(x_{0}, y_{0}, z_{0}\right)$ 处的两平面的法向为
+\begin{equation}
+	\left(1,1,1\right),\quad \left(\frac{2x_0}{a^2},\frac{2y_0}{b^2},\frac{2z_0}{c^2}\right).
+	\label{eq:31}
+\end{equation}
+则交线的切线为
+\begin{equation}
+	\left(1,1,1\right) \times \left(\frac{2x_0}{a^2},\frac{2y_0}{b^2},\frac{2z_0}{c^2}\right) = \left(\frac{2z_0}{c^2}-\frac{2y_0}{b^2},\frac{2x_0}{a^2}-\frac{2z_0}{c^2},\frac{2y_0}{b^2}-\frac{2x_0}{a^2}\right).
+\end{equation}
+
+由于交线在平面上，所以交线的副法向为
+\begin{equation}
+	(1,1,1),
+\end{equation}
+与椭球面的法向正交则
+\begin{equation}
+	\left(1,1,1\right) \cdot \left(\frac{2x_0}{a^2},\frac{2y_0}{b^2},\frac{2z_0}{c^2}\right) = \frac{2x_0}{a^2}+\frac{2y_0}{b^2}+\frac{2z_0}{c^2} = 0.
+	\label{eq:32}
+\end{equation}
+由\cref{eq:32}和原始方程三个方程联立求解得
+\begin{equation}
+	\frac{z^2 \,{\left(a^6 \,b^2 +a^6 \,c^2 -2\,a^4 \,b^4 -2\,a^4 \,c^4 +a^2 \,b^6 +a^2 \,c^6 +b^6 \,c^2 -2\,b^4 \,c^4 +b^2 \,c^6 \right)}}{a^2 \,b^2 \,c^2 \,{{\left(a^2 -b^2 \right)}}^2 }=0.
+\end{equation}
+要和$z$无关，则
+\begin{equation}
+	a^6 \,b^2 +a^6 \,c^2 -2\,a^4 \,b^4 -2\,a^4 \,c^4 +a^2 \,b^6 +a^2 \,c^6 +b^6 \,c^2 -2\,b^4 \,c^4 +b^2 \,c^6=0,
+\end{equation}
+即
+\begin{equation}
+	\left(a^3b-b^3a\right)^2+\left(b^3c-c^3b\right)^2+\left(c^3a-a^3c\right)^2=0,
+\end{equation}
+所以
+\begin{equation}
+	a^2=b^2=c^2.
+\end{equation}
+代入原方程，满足要求。
+
+

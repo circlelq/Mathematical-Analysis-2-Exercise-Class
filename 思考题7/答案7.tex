@@ -1,0 +1,32 @@
+\subsection{1}
+
+设 $\Omega \subset \mathbb{R}^{n}$ 是凸域, $f \in C^{1}\left(\Omega, \mathbb{R}^{n}\right),\  \Dif f$ 是 $\Omega$ 上的正定矩阵.
+
+求证: $f(x)$ 是 $\Omega$ 上的一一映射.
+
+\begin{proof}
+	若 $\exists x_{1}, x_{2} \in \Omega,$ s.t. $f\left(x_{1}\right)=f\left(x_{2}\right)$,
+
+令
+\begin{equation}
+	g(x)=\left(x_{2}-x_{1}\right) \cdot\left(f(x)-f\left(x_{1}\right)\right),
+\end{equation}
+\begin{equation}
+	G(t)=g\left(x_{1}+t\left(x_{2}-x_{1}\right)\right),
+\end{equation}
+
+则 $G(0)=G(1)=0$,
+
+$\because \Omega$ 是凸域,
+
+$\therefore \exists \xi \in(0,1),$ s.t. $G^{\prime}(\xi)=0$,
+
+即 $\Dif g\left(x_{1}+\xi\left(x_{2}-x_{1}\right)\right) \cdot\left(x_{2}-x_{1}\right)=0$,
+
+$\left(x_{2}-x_{1}\right) \Dif f\left(x_{1}+\xi\left(x_{2}-x_{1}\right)\right)\left(x_{2}-x_{1}\right)^{T}=0$.
+
+又 $\Dif f$ 是正定的,
+
+$\therefore x_{2}-x_{1}=0$， 即 $x_{1}=x_{2}, \ f(x)$ 是 $\Omega$ 上的单射.
+\end{proof}
+
