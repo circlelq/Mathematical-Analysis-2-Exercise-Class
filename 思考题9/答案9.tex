@@ -1,0 +1,129 @@
+
+\subsection{1}
+
+设 $f \in C^{2}\left(\mathbb{R}^{n}, \mathbb{R}^{n}\right)$, 且在 $\mathbb{R}^{n}$ 上 $\operatorname{det} \Dif f(x) \neq 0$, 又当 $|x| \rightarrow+\infty$ 时, $|f(x)| \rightarrow+\infty$.
+
+求证: $f\left(\mathbb{R}^{n}\right)=\mathbb{R}^{n}$ .
+
+
+\begin{proof}
+
+	即证 $\forall \xi \in \mathbb{R}^{n},\ \exists x_{0} \in \mathbb{R}^{n},$ s.t. $f\left(x_{0}\right)=\xi$
+
+	$\because|x| \rightarrow+\infty$ 时, $|f(x)| \rightarrow+\infty$,
+
+	$\therefore \forall \xi \in \mathbb{R}^{n},\ |x| \rightarrow+\infty$ 时, $|f(x)-\xi| \rightarrow+\infty$,
+
+	$\therefore \exists x_{0} \in \mathbb{R}^{n}, \ \mathrm{s.t.}\ |f(x)-\xi|$ 取最小值,即 $|f(x)-\xi|^{2}$ 取最小值.
+
+	$\therefore \frac{\partial}{\partial x_{i}}|f(x)-\xi|^{2}=0,$ 当 $x=x_{0}$,
+
+	即有
+$\Dif f\left(x_{0}\right) \cdot\left(f\left(x_{0}\right)-\xi\right)=0$.
+
+又 $\operatorname{det} \Dif f(x) \neq 0,\  \therefore f\left(x_{0}\right)-\xi=0,$ 即 $f\left(x_{0}\right)=\xi$.
+\end{proof}
+
+
+\subsection{2}
+
+设 ${D}$ 为有界凸域, 二元函数 $f(x, y)$ 在 $\bar{D}$ 上连续, 在边界上为常数, 在 ${D}$ 内可微.
+
+求证:
+${D}$ 内一定有一函数的临界点.
+
+\begin{proof}
+$f(x, y)$ 在 $\bar{D}$ 上连续 $\Rightarrow$
+
+$f(x, y)$ 在 $\bar{D}$ 上可取到最大值和最小 $f_{\max }=f\left(x_{1}, y_{1}\right), f_{\min }=f\left(x_{2}, y_{2}\right)$ .
+
+若 $\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right)$ 同在边界上, 则 $f_{\max }=f_{\min }, f=C, \quad f_{x} \equiv 0, f_{y} \equiv 0$ .
+
+若 $\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right)$ 不同在边界上, 则 ${D}$ 内一定有一极值点 $\left(x_{0}, y_{0}\right),$ 则
+\begin{equation}
+	f_{x}\left(x_{0}, y_{0}\right)=0,\quad f_{y}\left(x_{0}, y_{0}\right)=0.
+\end{equation}
+\end{proof}
+
+\subsection{3}
+\begin{enumerate}[(1)]
+	\item 求 $f(x, y, z)=x^{a} y^{b} z^{c}$ 在约束条件 $x+y+z=1$ 下的最大值, 其中 ${a}, {b}, {c}$ 是正常数,
+	$x,y,z$ 非负.
+	\item 证明对六个正数 $a,b,c,u,v,w$
+	\begin{equation}
+		\left(\frac{u}{a}\right)^{a}\left(\frac{v}{b}\right)^{b}\left(\frac{w}{c}\right)^{c} \leq\left(\frac{u+v+w}{a+b+c}\right)^{a+b+c}
+	\end{equation}
+	成立.
+\end{enumerate}
+
+
+
+\begin{enumerate}[(1)]
+	\item {\sf \bfseries{解:}} $ f(x, y, z)=x^{a} y^{b} z^{c}=x^{a} y^{b}(1-x-y)^{c}$
+
+	$\ln f=a \ln x+b \ln y+c \ln (1-x-y)$
+	
+	$f$ 的最大值即 $\ln f$ 的最大值
+	
+	求导
+	\begin{equation}
+		\left\{\begin{array}{l}\frac{a}{x}-\frac{c}{1-x-y}=0 \\ \frac{b}{y}-\frac{c}{1-x-y}=0\end{array} \Rightarrow \frac{a}{x}=\frac{b}{y}=\frac{c}{1-x-y}\right.
+	\end{equation}
+	可得 $x=\frac{a}{a+b+c}, y=\frac{b}{a+b+c}, z=\frac{c}{a+b+c}$ 时取最大值 $\frac{a^{a} b^{b} c^{c}}{(a+b+c)^{a+b+c}}$ .
+	\item \begin{proof}
+		令 $x=\frac{u}{u+v+w},\ y=\frac{v}{u+v+w},\ z=\frac{w}{u+v+w}$ 则由(1) 有
+		\begin{equation}
+			\left(\frac{u}{u+v+w}\right)^{a}\left(\frac{v}{u+v+w}\right)^{b}\left(\frac{w}{u+v+w}\right)^{c} \leqslant \frac{a^{a} b^{b} c^{c}}{(a+b+c)^{a+b+c}},
+		\end{equation}
+		即
+		\begin{equation}
+			\left(\frac{u}{a}\right)^{a}\left(\frac{v}{b}\right)^{b}\left(\frac{w}{c}\right)^{c} \leqslant \left(\frac{u+v+w}{a+b+c}\right)^{a+b+c}.
+		\end{equation}
+	\end{proof}
+\end{enumerate}
+
+\subsection{4}
+
+设 $u(x, y)$ 在 $x^{2}+y^{2} \leq 1$ 上连续, 在 $x^{2}+y^{2}<1$ 上满足:
+\begin{equation}
+	\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}=u,
+\end{equation}
+且在 $x^{2}+y^{2}=1$ 上 $u(x, y)>0,$ 证明 :
+\begin{enumerate}[(1)]
+	\item 当 $x^{2}+y^{2} \leq 1$ 时, $u(x, y) \geq 0$;
+	\item 当 $x^{2}+y^{2} \leq 1$ 时, $u(x, y)>0$.
+\end{enumerate}
+
+\begin{proof}
+	~
+	\begin{enumerate}[(1)]
+		\item 上可取得最小值 $u_{0}=u\left(x_{0}, y_{0}\right)$ .
+		
+		反证: 设 $\exists\left(x^{\prime}, y^{\prime}\right),$ 使得 $u\left(x^{\prime}, y^{\prime}\right)<0,$ 则 $u_{0}=u\left(x_{0}, y_{0}\right)<0,$ 且 $x_{0}^{2}+y_{0}^{2}<1$ .
+
+		所以
+		\begin{gather}
+			\frac{\partial u\left(x_{0}, y_{0}\right)}{\partial x}=\frac{\partial u\left(x_{0}, y_{0}\right)}{\partial y}=0,\\
+			\frac{\partial^{2} u\left(x_{0}, y_{0}\right)}{\partial x^{2}} \geqslant 0, \frac{\partial^{2} u\left(x_{0}, y_{0}\right)}{\partial y^{2}} \geqslant 0,
+		\end{gather}
+		即 ${H}_{u}\left(x_{0}, y_{0}\right)$ 至少是半正定.
+
+		$\frac{\partial^{2} u\left(x_{0}, y_{0}\right)}{\partial x^{2}}+\frac{\partial^{2} u\left(x_{0}, y_{0}\right)}{\partial y^{2}}=u\left(x_{0}, y_{0}\right) \geqslant 0,$ 与 $u_{0}=u\left(x_{0}, y_{0}\right)<0$ 矛盾, 所以
+		$u(x, y) \geqslant 0$.
+		\item 已知 $: \frac{\partial^{2} C \me^{x}}{\partial x^{2}}+\frac{\partial^{2} C \me^{x}}{\partial y^{2}}=C \me^{x},$ 可得
+		\begin{equation}
+			\frac{\partial^{2} u-C \me^{x}}{\partial x^{2}}+\frac{\partial^{2} u-C \me^{x}}{\partial y^{2}}=u-C \me^{x}.
+		\end{equation}
+		
+		令 $v=u-C \me^{x},$ 则 $\frac{\partial^{2} v}{\partial x^{2}}+\frac{\partial^{2} v}{\partial y^{2}}=v$,
+		
+		因为在 $x^{2}+y^{2}=1$ 上 $u(x, y)>0,$ 所以在 $x^{2}+y^{2}=1$ 存在最小值 $\bar{u}>0$.
+
+		取 $C$ 使得 $C>0,$ 且 $\bar{u}-C \me>0,$ 则在 $x^{2}+y^{2}=1$ 上,  $v>0$ .
+
+		由(1)可知: 当 $x^{2}+y^{2} \leq 1$ 时,  $v(x, y) \geq 0,$ 而 $u=v+C \me^{x}>0$ .
+	\end{enumerate}
+\end{proof}
+
+
+

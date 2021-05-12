@@ -1,0 +1,91 @@
+\subsection{1}
+
+若 $F(x, y, z)=0$ 可分别解出 $x=f(y, z),\ y=g(z, x),\ z=h(x, y)$, 则 $f_{z} g_{x} h_{y}=-1$.
+
+\begin{proof}
+	$\quad F(x, y, z)=F(f(y, z), y, z)=0$
+	对 ${z}$ 求偏导
+	$F_{x} \cdot f_{z}+F_{z}=0$,
+
+	$\therefore f_{z}=-\frac{F_{z}}{F_{x}}$,
+
+	同理 $g_{x}=-\frac{F_{x}}{F_{y}},\ h_{y}=-\frac{F_{y}}{F_{z}}$.
+
+	$\therefore f_{z} \cdot g_{x} \cdot h_{y}=-1$.
+\end{proof}
+
+\subsection{2}
+
+
+讨论二元函数
+\begin{equation}
+	f(x, y)=\left\{\begin{aligned}&\frac{|x|^{\alpha}|y|^{\beta}}{x^{2}+y^{2}}\left(x^{2}+y^{2} \neq 0\right), \\& 0\qquad \quad  \left(x^{2}+y^{2}=0\right).\end{aligned}\right.
+\end{equation}
+的连续性，可导性与可微性。
+
+{ \sf \bfseries 解:} 令 $g(x, y)=\frac{|x|^{\alpha}|y|^{\beta}}{x^{2}+y^{2}}$.
+
+\subsubsection{连续性}
+
+
+$\alpha<0$ 或 $\beta<0$ 时, 不连续.
+
+$\alpha \geq 0,\ \beta \geq 0$ 时, 令 $x=r \cos \theta,\ y=r \sin \theta$, 则
+\begin{equation}
+	g(x, y)=\frac{|x|^{\alpha}|y|^{\beta}}{x^{2}+y^{2}}=|r|^{\alpha+\beta-2}|\cos \theta|^{\alpha}|\sin \theta|^{\beta},
+\end{equation}
+
+$\alpha+\beta>2$ 时, $\lim \limits_{r \rightarrow 0} g=0$, 连续,
+
+$\alpha+\beta=2$ 时, $\lim \limits_{r \rightarrow 0} g=|\cos \theta|^{\alpha}|\sin \theta|^{\beta}$, 不连续,
+
+$\alpha+\beta<2$ 时，不连续,
+
+$\therefore \alpha \geq 0, \beta \geq 0$, 且 $\alpha+\beta>2$ 时连续.
+
+\subsubsection{可导性}
+
+
+考察
+\begin{equation}
+	\lim \limits_{r \rightarrow 0} \frac{f(r \cos \theta, r \sin \theta)-f(0,0)}{r}=\lim \limits_{r \rightarrow 0} \frac{g}{r}=\lim \limits_{r \rightarrow 0} \frac{|r|^{\alpha+\beta-2}|\cos \theta|^{\alpha}|\sin \theta|^{\beta}}{r}.
+\end{equation}
+$\alpha+\beta>3$ 时, $\lim \limits_{r \rightarrow 0} \frac{g}{r}=0$, 可导,
+
+$\alpha+\beta=3$ 时, $\lim \limits_{r \rightarrow 0+} \frac{g}{r}=|\cos \theta|^{\alpha}|\sin \theta|^{\beta},\ \lim \limits_{r \rightarrow 0-} \frac{g}{r}=-|\cos \theta|^{\alpha}|\sin \theta|^{\beta}$, 不可导,
+
+$\alpha+\beta<3$ 时，不可导,
+
+$\therefore \alpha \geq 0, \beta \geq 0$, 且 $\alpha+\beta>3$ 时可导.
+
+\subsubsection{可微性}
+
+若可微, 则各方向导数存在, 由可导性 $\alpha \geq 0,\ \beta \geq 0,\ \alpha+\beta>3$, 且 $\frac{\partial f}{\partial x}=0,\ \frac{\partial f}{\partial y}=0$,
+
+$\therefore f(x, y)=o\left(\sqrt{x^{2}+y^{2}}\right) \Rightarrow \alpha+\beta>3$,
+
+$\therefore \alpha \geq 0,\ \beta \geq 0$, 且 $\alpha+\beta>3$ 时可微.
+
+\subsection{3}
+
+求函数 $u=x^{3}+y^{3}+z^{3}-2 x y z$ 在单位球内部 $x^{2}+y^{2}+z^{2} \leq 1$ 的最大值与最小值。
+
+
+{ \sf \bfseries 解:} 最大值与最小值在极值点或边界上取得.
+\begin{equation}
+	\left\{\begin{array}{l}\frac{\partial u}{\partial x}=0 \\ \frac{\partial u}{\partial y}=0, \Rightarrow x=y=z=0,\\ \frac{\partial u}{\partial z}=0.\end{array}\right.
+\end{equation}
+对任意 $x=y=z=\varepsilon>0, u>0$,对任意 $x=y=z=-\varepsilon<0, u<0$, 所以临界点 $(0,0,0)$
+不是极值点，最大最小值在边界上取得
+
+设 $f=x^{3}+y^{3}+z^{3}-2 x y z+\lambda\left(x^{2}+y^{2}+z^{2}-1\right)$,
+\begin{equation}
+	\left\{\begin{array}{l}\frac{\partial f}{\partial x}=3 x^{2}-2 y z+2 x \lambda=0, \\ \frac{\partial f}{\partial y}=3 y^{2}-2 x z+2 y \lambda=0, \\ \frac{\partial f}{\partial z}=3 z^{2}-2 x y+2 z \lambda=0, \\ \frac{\partial f}{\partial \lambda}=x^{2}+y^{2}+z^{2}-1=0.\end{array}\right.
+\end{equation}
+$\Rightarrow(x, y, z)=\left(\pm \frac{\sqrt{3}}{3}, \pm \frac{\sqrt{3}}{3}, \pm \frac{\sqrt{3}}{3}\right) \quad$ 或 $\quad(0,0, \pm 1) \quad$ 或 $\quad\left(\frac{5 \sqrt{6}}{18}, \frac{5 \sqrt{6}}{18},-\frac{\sqrt{6}}{9}\right)$.
+
+$\left(-\frac{5 \sqrt{6}}{18},-\frac{5 \sqrt{6}}{18}, \frac{\sqrt{6}}{9}\right) \text { 可轮换 }$.
+
+	{ 在 } $(0,0,1),(0,1,0),(1,0,0)$  { 取最大值 } $1, $ { 在 } $(0,0,-1),(0,0,-1),(-1,0,0) $ { 取最小值 }$-1$.
+
+
