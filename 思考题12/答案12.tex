@@ -1,0 +1,60 @@
+
+
+\subsection{1}
+
+设在 $D=[a, b] \times[c, d]$ 上定义的二元函数 $f(x, y)$ 有二阶连续偏导数
+\begin{enumerate}[(1)]
+	\item 证明: $\iint_{D} f_{x y}^{\prime \prime}(x, y) \dif x \dif y=\iint_{D} f_{y x}^{\prime \prime}(x, y) \dif x \dif y,\ \forall(x, y) \in D$;
+	\item 利用 (1) 证明: $f_{x y}^{\prime \prime}(x, y)=f_{y x}^{\prime \prime}(x, y),\ \forall(x, y) \in D$,
+\end{enumerate}
+
+
+
+\begin{proof}
+	~
+	\begin{enumerate}[(1)]
+		\item
+		      \begin{equation}
+			      \begin{aligned}
+				      \iint_{D} f_{x y}^{\prime \prime}(x, y )\dif x \dif y= & \ \int_{a}^{b} \dif x \int_{c}^{d}f_{x y}^{\prime \prime}(x, y) \dif y        \\
+				      =                                                      & \ \int_{a}^{b}   \left(f_{x}^{\prime}(x, d)-f_{x}^{\prime}(x, c)\right)\dif x \\
+				      =                                                      & f(b, d)-f(b, c)-f(a, d)+f(a, c).
+			      \end{aligned}
+		      \end{equation}
+		      同理
+		      \begin{equation}
+			      \iint_{D} f_{y x}^{\prime \prime} \dif x \dif y=f(b, d)-f(b, c)-f(a, d)+f(a, c)
+		      \end{equation}
+		      所以
+		      \begin{equation}
+			      \iint_{D} f_{y x}^{\prime \prime}(x, y) \dif x \dif y=\iint_{D} f_{x y}^{\prime \prime}(x, y) \dif x \dif y.
+		      \end{equation}
+
+		\item 以上关系在任意 $D=[a, b] \times[c, d]$ 上成立.若 $F(x, y)$ 连续, 在任意
+		      $D=[a, b] \times[c, d]$ 成立 $\iint_{D} F(x, y) \dif x \dif y=0, $ 则有 $F(x, y) \equiv 0$.
+
+		      假设 $F(x, y) \equiv 0$ 不成立, 即在某点 $\left(x_{0}, y_{0}\right), F\left(x_{0}, y_{0}\right) \neq 0,$ 不妨设 $F\left(x_{0}, y_{0}\right)>0$.
+
+		      由连续性,在 $\left(x_{0}, y_{0}\right)$ 某方形领域 $D^{\prime}=\left[x_{0}-\delta, x_{0}+\delta\right] \times\left[y_{0}-\delta, y_{0}+\delta\right] $ 上  $F(x, y)>0$.
+
+		      则 $\iint_{D^{\prime}} F(x, y) \dif x \dif y>0,$ 矛盾.所以 $F(x, y) \equiv 0$。
+
+		      取 $F(x, y)=f_{y x}^{\prime \prime}(x, y)-f_{x y}^{\prime \prime}(x, y),$ 即可证明 $f_{y x}^{\prime \prime}(x, y)=f_{x y}^{\prime \prime}(x, y)$ .
+	\end{enumerate}
+
+
+\end{proof}
+
+
+\subsection{2}
+
+计算 $x^{2}+y^{2} \leq 1, \ z^{2}+y^{2} \leq 1, \ x^{2}+z^{2} \leq 1$ 围成区域的体积.
+
+{\sf \bfseries{解:}}
+\begin{equation}
+	8(2-\sqrt{2}).
+\end{equation}
+
+
+
+

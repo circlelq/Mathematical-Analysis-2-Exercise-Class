@@ -5,11 +5,12 @@
 \graphicspath{{fig/}}
 \usepackage{parskip}
 \usepackage{autobreak}
+\usepackage{esint}
 \usepackage{fancyhdr}
 \usepackage{fancyref}
 \usepackage{commath}%定义d
 \usepackage[UTF8,scheme = chinese]{ctex}
-\usepackage{geometry}   
+\usepackage{geometry}
 \usepackage{bm}
 \usepackage{multicol} %用于实现在同一页中实现不同的分栏
 \usepackage{fontawesome}
@@ -38,14 +39,14 @@
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
 \renewcommand{\proofname}{\indent \sf \bfseries{证明}}
 
-\catcode`\。=\active   
-\catcode`\，=\active  
+\catcode`\。=\active
+\catcode`\，=\active
 \newcommand{。}{．}
 \newcommand{，}{,}
 
 % \setmainfont{TimesNewRomanPSMT}
 % \setsansfont{Helvetica-Light}
-% \setCJKmainfont[ItalicFont=STKaitiSC-Regular,BoldFont=STSongti-SC-Black]{STSongti-SC-Regular}
+\setCJKmainfont[ItalicFont=STKaitiSC-Regular,BoldFont=SimSong-Bold]{SimSong-Regular}
 % \setCJKsansfont[BoldFont=STHeitiSC-Medium]{STHeitiSC-Light}
 % \setCJKmonofont{STKaitiSC-Bold}% 加粗楷体
 % \newfontfamily\ktb{STKaitiSC-Bold}
@@ -75,12 +76,12 @@
 
 
 \titleformat{\subsection}
-  {\normalfont\large\bfseries}{}{0em}{}
+{\normalfont\large\bfseries}{}{0em}{}
 
 \renewcommand*\footnoterule{%
-    \vspace*{-3pt}%
-    {\color{PKUred}\hrule width 2in height 0.4pt}%
-    \vspace*{2.6pt}%
+  \vspace*{-3pt}%
+  {\color{PKUred}\hrule width 2in height 0.4pt}%
+  \vspace*{2.6pt}%
 }
 
 
@@ -109,23 +110,23 @@
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 \lstset{ %
-backgroundcolor=\color{white},      % choose the background color
-basicstyle=\footnotesize\ttfamily,  % size of fonts used for the code
-columns=fullflexible,
-tabsize=4,
-breaklines=true,               % automatic line breaking only at whitespace
-captionpos=b,                  % sets the caption-position to bottom
-commentstyle=\color{mygreen},  % comment style
-escapeinside={\%*}{*)},        % if you want to add LaTeX within your code
-keywordstyle=\color{blue},     % keyword style
-stringstyle=\color{mymauve}\ttfamily,  % string literal style
-frame=single,
-rulesepcolor=\color{red!20!green!20!blue!20},
-% identifierstyle=\color{red},
-language=c++,
-xleftmargin=4em,xrightmargin=2em, aboveskip=1em,
-framexleftmargin=2em,
-numbers=left
+  backgroundcolor=\color{white},      % choose the background color
+  basicstyle=\footnotesize\ttfamily,  % size of fonts used for the code
+  columns=fullflexible,
+  tabsize=4,
+  breaklines=true,               % automatic line breaking only at whitespace
+  captionpos=b,                  % sets the caption-position to bottom
+  commentstyle=\color{mygreen},  % comment style
+  escapeinside={\%*}{*)},        % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},     % keyword style
+  stringstyle=\color{mymauve}\ttfamily,  % string literal style
+  frame=single,
+  rulesepcolor=\color{red!20!green!20!blue!20},
+  % identifierstyle=\color{red},
+  language=c++,
+  xleftmargin=4em,xrightmargin=2em, aboveskip=1em,
+  framexleftmargin=2em,
+  numbers=left
 }
 
 %脚注

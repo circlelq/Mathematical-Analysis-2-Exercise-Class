@@ -1,0 +1,330 @@
+\documentclass[12pt]{article}
+\input{../setting.tex}
+\setcounter{secnumdepth}{2}
+\setlength{\parindent}{0em}
+
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={参考答案8}
+}
+
+\title{
+		\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{\LARGE Peking University}\\[1cm] % Name of your university/college \\ [25pt]
+		\horrule{0.5pt} \\[0.5cm]
+		\huge \bfseries{参考答案8} \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+		\href{https://github.com/circlelq/Mathematical-Analysis-2-Exercise-Class}{\faGithub}
+		\quad \href{mailto:yuanlqpku@163.com}{\faEnvelope}  \quad \emph{袁磊祺}  \\	\normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+
+
+\maketitle
+
+
+\subsection{18.3.4}
+
+求下列函数的极大值点和极小值点：
+
+\subsubsection{(2)}
+
+$f(x,y)=xy\left(x^2+y^2-1\right)$.
+\par $\pd{f}{x}=y\left(x^{2}+y^{2}-1\right)+x y(2 x)=0$,
+\par $\pd[2]{f}{x}=6xy$,
+\par $\pd{f}{y}=x\left(x^{2}+y^{2}-1\right)+x y(2 y)=0$.
+\par $\pd[2]{f}{y}=6xy$.
+\par $(x,y)=(0,0),\ \left(\pm \frac{1}{2}, \pm \frac{1}{2}\right),\ (0, \pm 1),\ (\pm 1,0)$可能为极值点.
+\par 极大值：$(x,y)=\left( -\frac{1}{2},  \frac{1}{2}\right),\ \left(\frac{1}{2},- \frac{1}{2}\right)$，
+\par 极小值：$(x,y)=\left(\frac{1}{2},  \frac{1}{2}\right),\ \left(-\frac{1}{2},- \frac{1}{2}\right)$。
+
+
+
+\subsubsection{(5)}
+
+$f(x,y)=\sin x + \sin y + \sin(x+y)$.
+\par $\pd{f}{x}=\cos x + \cos(x+y)=0$,
+\par $\pd{f}{y}=\cos y +\cos(x+y)=0$.
+\par $(x,y)=(0,0),\ \left(\pm \frac{1}{2}, \pm \frac{1}{2}\right),\ (0, \pm 1),\ (\pm 1,0)$可能为极值点.
+\par 极大值：$(x,y)=\left(\frac{\pi}{3}+2n\pi,\frac{\pi}{3}+2m\pi\right)$，其中$n,m\in \mathbb{Z}$, $H_f=-\frac{\sqrt{3}}{2}
+	\begin{pmatrix}
+		2 & 1 \\1&2
+	\end{pmatrix}$,负定。
+\par 极小值：$(x,y)=\left(-\frac{\pi}{3}+2n\pi,-\frac{\pi}{3}+2m\pi\right)$，其中$n,m\in \mathbb{Z}$, $H_f=\frac{\sqrt{3}}{2}\begin{pmatrix}
+		2 & 1 \\1&2
+	\end{pmatrix}$，正定。
+
+
+\subsection{18.3.5}
+
+求下列函数的极大值点和极小值点：
+
+\subsubsection{(1)}
+
+$f(x,y,z)=x^2+y^2+z^2-4xy+6x+2z$.
+\par $\pd{f}{x}=2x-4y+6=0$,
+\par $\pd{f}{y}=2y-4x=0$,
+\par $\pd{f}{z}=2z+2=0$.
+\par $\therefore x=1,\ y=2,\ z=-1.$
+\par $H_f=\begin{pmatrix}
+		2 & -4 & 0 \\-4&2&0\\0&0&2
+	\end{pmatrix}$不定，无极值点。
+
+
+\subsubsection{(2)}
+
+$f(x,y,z)=(x+y+z)\me^{-x^2-y^2-z^2}$.
+\par $\pd{f}{x}=[-2x(x+y+z)+1]\me^{-x^2-y^2-z^2}=0$,
+\par $\pd{f}{y}=[-2y(x+y+z)+1]\me^{-x^2-y^2-z^2}=0$,
+\par $\pd{f}{z}=[-2z(x+y+z)+1]\me^{-x^2-y^2-z^2}=0$.
+\par $\therefore x=y=z=\pm\frac{\sqrt{6}}{6}.$
+\par $H_f(\frac{\sqrt{6}}{6},\frac{\sqrt{6}}{6},\frac{\sqrt{6}}{6})=-\frac{\sqrt{6}\me^{-\frac{1}{2}}}{3}
+	\begin{pmatrix}
+		4 & 1 & 1 \\1&4&1\\1&1&4
+	\end{pmatrix}$负定，为极大值点。
+\par $H_f(\frac{-\sqrt{6}}{6},\frac{-\sqrt{6}}{6},\frac{-\sqrt{6}}{6})=\frac{\sqrt{6}\me^{-\frac{1}{2}}}{3}\begin{pmatrix}
+		4 & 1 & 1 \\1&4&1\\1&1&4
+	\end{pmatrix}$正定，为极小值点。
+
+
+
+\subsection{18.3.6}
+
+用隐函数微分法求隐函数$z=z(x,y)$的极大值和极小值：
+
+\subsubsection{(3)}
+
+$x^2+y^2+z^2-xz-yz+2x+2y+2z-2=0$.
+\par 一次微分： $2x\dif x + 2y\dif y +2z\dif z -x\dif z - z\dif x - y \dif z - z\dif y +2\dif x +2\dif y + 2\dif z=0$,
+\par $\dif z=0$得$x=y=-3\pm\sqrt{6}$.
+\par 两次微分： $2 \dif x \dif x+2 \dif y \dif y+2z \mathrm{d} ^2z-y \mathrm{d}^2z-x \mathrm{d}^2z+2 \mathrm{d}^2z=0$.
+\par $ \mathrm{d} ^2z=-\frac{2}{z+4}\left( \dif x \dif x+ \dif y \dif y\right)$.
+\par $\therefore H_z=-\frac{2}{z+4}\begin{pmatrix}
+		1 & 0 \\0&1
+	\end{pmatrix}$.
+\par $x=y=-3+\sqrt{6}$时， $H_z$负定，为极大值， $z=2\sqrt{6}-4$, ($z=-4$舍弃)
+\par $x=y=-3-\sqrt{6}$时， $H_z$正定，为极小值， $z=-2\sqrt{6}-4$.
+
+
+\subsubsection{(4)}
+
+$z^2+xyz-x^2-xy^2-9=0$.
+\par 一次微分：$2z\dif z+xy\dif z+xz\dif y+zy\dif x-2x\dif x-y^2\dif x-2xy\dif y=0$,
+\par $\dif z=0$得$x=1,\ z=2y=\pm2\sqrt{2}$.
+\par 二次微分：$2z \mathrm{d}^2z+xy \mathrm{d}^2z+2z\dif x\dif y-2 \dif x\dif x-2y\dif x\dif y-2x \dif y\dif y-2y\dif x\dif y=0.$
+\par $\therefore H_z=\frac{1}{5y}\begin{pmatrix}
+		2 & y \\y&2
+	\end{pmatrix}$.
+\par $y=\sqrt{2}$时， $H_z$正定，为极小值， $z=2\sqrt{2}$,
+\par $y=-\sqrt{2}$时， $H_z$负定，为极大值， $z=-2\sqrt{2}$.
+
+\subsection{18.3.7}
+
+设$f(x,y)=3x^2y-x^4-2y^2$。证明：$(0,0)$不是它的极值点，但沿过$(0,0)$点的每条直线，$(0,0)$都是它的极大值点。
+
+\begin{proof}
+	$f(x,y)=3x^2y-x^4-2y^2$.
+	\par $f(0,0)=0$, 若 $y=\frac{3}{4}x^2$, $f(x,y)=\frac{1}{8}x^4>0$,若 $x=0$, $f(x,y)=-2y^2<0$, 所以不为极值点。
+	\par 若 $y=kx$, $f(x,y)=3kx^3-x^4-2k^2x^2=g(x)$, $g'(0)=0,\ g''(0)=-4k^2<0\ (k\not=0)$,所以极大。
+	\par 若$k=0$或$x=0$,易得极大。
+
+\end{proof}
+
+
+
+\subsection{18.3.8}
+
+求证：
+
+\subsubsection{(3)}
+
+$f(x,y,z)=(ax+by+cz)\me^{-(x^2+y^2+z^2)}$在$\mathbb{R}^3$有最大值和最小值，其中$a^2+b^2+c^2>0$.
+
+\begin{proof}
+	$\pd{f}{x}=\pd{f}{y}=\pd{f}{z}=0,$ 则$x_0=ak,\ y_0=bk,\ z_0=ck,\ k=\pm \frac{1}{\sqrt{2(a^2+b^2+c^2)}}.$
+	\par $\therefore f(x_0,y_0,z_0)=\pm \frac{\sqrt{2}}{2}\sqrt{a^2+b^2+c^2}\me^{-\frac{1}{2}}$,令$p=\frac{\sqrt{2}}{2}\sqrt{a^2+b^2+c^2}\me^{-\frac{1}{2}}$.
+	\par $\because \lim \limits_{x^2+y^2+z^2\to +\infty}f=0,\ \therefore \exists R>0\ \mathrm{s.t.}$当$r\geq R$时， $-p/2<f<p/2$, 其中$r=\sqrt{x^2+y^2+z^2}$
+	\par 对于有界闭集$\{(x,y,z)|r\leq R\}$, 其最值点在边界或$(x_0,y_0,z_0)$.
+	\par $\because r\geq R$时， $-p/2<f<p/2,\ \therefore$最值点为$(x_0,y_0,z_0)$.
+\end{proof}
+
+
+
+\subsection{18.3.15}
+
+在椭球面$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$的内接长方体中，求体积为最大的那个长方体。
+
+设$x,y,z>0,\ V=8xyz,\ P(x)=8xyz,\ Q(x)=\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1$.
+\par $F(x,y,z)=P(x)+\lambda Q(x).$
+\par $\pd{F}{x}=8yz+\frac{2x\lambda}{a^2}=0,\ \pd{F}{y}=8xz+\frac{2y\lambda}{b^2}=0,\ \pd{F}{z}=8yx+\frac{2z\lambda}{c^2}=0$.
+\par $x=\frac{a}{\sqrt{3}},\ y=\frac{b}{\sqrt{3}},\ z=\frac{c}{\sqrt{3}}$.
+\par $V=\frac{8\sqrt{3}}{9}abc.$
+
+\subsection{18.4.5}
+
+求下列条件极大值和条件极小值：
+
+
+\subsubsection{(3)}
+
+$\left(x^2+y^2+z^2\right)^2=a^2x^2+b^2y^2+c^2z^2,\ lx+my+nz=0,$求$f(x,y,z)=x^2+y^2+z^2$的极值；
+
+设$\varphi = x^2+y^2+z^2,$
+\par $g(x,y,z,\varphi)=\varphi + \lambda_1\left[\varphi^2-\left(a^2x^2+b^2y^2+c^2z^2\right)\right]+\lambda_2(lx+my+nz)+\lambda_3\left[\varphi-\left(x^2+y^2+z^2\right)\right]$
+\par $\pd{g}{\varphi}=1+2\lambda_1\varphi+\lambda_3=0,$
+\par $\pd{g}{x}=-2\lambda_1a^2x+\lambda_2l-2\lambda_3x=0,$
+\par $\pd{g}{y}=-2\lambda_1b^2y+\lambda_2m-2\lambda_3y=0,$
+\par $\pd{g}{z}=-2\lambda_1c^2z+\lambda_2n-2\lambda_3z=0.$
+\par $\pd{g}{x}x+\pd{g}{y}y+\pd{g}{z}z=-2\lambda_1\varphi^2-2\lambda_3\varphi=0.$
+\par $\therefore \lambda_1\varphi+\lambda_3=0,\ \lambda_3=1,\ \varphi=-\frac{1}{\lambda_1}.$
+\par $x=\frac{\lambda_2l}{2+2\lambda_1a^2},\ y=\frac{\lambda_2m}{2+2\lambda_1b^2},\ z=\frac{\lambda_2n}{2+2\lambda_1c^2}.$
+\par $\therefore \frac{l^2}{1+\lambda_1a^2}+\frac{m^2}{1+\lambda_1b^2}+\frac{n^2}{1+\lambda_1c^2}=0$.
+\par 解得
+
+
+$\varphi=\begin{pmatrix}
+		\frac{\sigma_2 }{\sigma_4 +\sigma_3 -\sigma_1 +\sigma_6 +\sigma_5 } \\
+		\frac{\sigma_2 }{\sigma_4 +\sigma_3 +\sigma_1 +\sigma_6 +\sigma_5 }
+	\end{pmatrix}$
+\par 其中
+\par $\sigma_1 =\sqrt{a^4 m^4 +2a^4 m^2 n^2 +a^4 n^4 +2a^2 b^2 l^2 m^2 -2a^2 b^2 l^2 n^2 -2a^2 b^2 m^2 n^2 -2a^2 b^2 n^4  }$
+\par $\overline{-2a^2 c^2 l^2 m^2 +2a^2 c^2 l^2 n^2 -2a^2 c^2 m^4 -2a^2 c^2 m^2 n^2 +b^4 l^4 +2b^4 l^2 n^2 +b^4 n^4 -2b^2 c^2 l^4 }$
+\par $\overline{-2b^2 c^2 l^2 m^2 -2b^2 c^2 l^2 n^2 +2b^2 c^2 m^2 n^2 +c^4 l^4 +2c^4 l^2 m^2 +c^4 m^4}$,\
+$	\ \sigma_2 =2a^2 b^2 n^2 +2a^2 c^2 m^2 +2b^2 c^2 l^2,\ \sigma_3 =c^2 {\left(l^2 +m^2 \right)},\ \sigma_4 =n^2 {\left(a^2 +b^2 \right)},\ \sigma_5 =b^2 l^2 ,\ \sigma_6 =a^2 m^2$.
+\par 对于有界闭集，最大最小值存在，所以$\varphi$第一个分量为极大值， 第二个分量为极小值。$(0,0,0)$ 的某个去心领域内无定义。
+
+
+\subsubsection{(4)}
+
+$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1,\ lx+my+nz=0,$求$f(x,y,z)=\frac{x^2}{a^4}+\frac{y^2}{b^4}+\frac{z^2}{c^4}$的极值；
+
+设$\varphi = \frac{x^2}{a^4}+\frac{y^2}{b^4}+\frac{z^2}{c^4},$
+\par $g(x,y,z)=\frac{x^2}{a^4}+\frac{y^2}{b^4}+\frac{z^2}{c^4} + \lambda_2\left(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1\right)+\lambda_1(lx+my+nz)$
+\par $\pd{g}{x}=\lambda_1l+\frac{2\lambda_2x}{a^2}+\frac{2x}{a^4}=0,$
+\par $\pd{g}{y}=\lambda_1m+\frac{2\lambda_2y}{b^2}+\frac{2y}{b^4}=0,$
+\par $\pd{g}{z}=\lambda_1n+\frac{2\lambda_2z}{c^2}+\frac{2z}{c^4}=0,$
+\par $\pd{g}{x}x+\pd{g}{y}y+\pd{g}{z}z=2\lambda_2+2\varphi=0,\ \varphi=-\lambda_2.$
+\par $x=-\frac{a^4\lambda_1l}{2+2\lambda_2a^2},\ y=-\frac{b^4\lambda_1m}{2+2\lambda_2b^2},\ z=-\frac{c^4\lambda_1n}{2+2\lambda_2c^2}.$
+\par $\therefore \frac{a^4l^2}{1+\lambda_2a^2}+\frac{b^4m^2}{1+\lambda_2b^2}+\frac{c^4n^2}{1+\lambda_2c^2}=0$.
+\par 解得$\varphi=\begin{pmatrix}
+		\frac{\sigma_8 -\sigma_1 +\sigma_7 +\sigma_6 +\sigma_5 +\sigma_4 +\sigma_3 }{\sigma_2 } \\
+		\frac{\sigma_1 +\sigma_8 +\sigma_7 +\sigma_6 +\sigma_5 +\sigma_4 +\sigma_3 }{\sigma_2 }
+	\end{pmatrix}$,
+\par 其中
+\par \par $\sigma_1 =\sqrt{a^8 b^4 l^4 -2a^8 b^2 c^2 l^4 +a^8 c^4 l^4 +2a^6 b^6 l^2 m^2 -2a^6 b^4 c^2 l^2 m^2 -2a^6 b^2 c^4 l^2 n^2 }$
+\par $\overline{+2a^6 c^6 l^2 n^2 +a^4 b^8 m^4 -2a^4 b^6 c^2 l^2 m^2 +2a^4 b^4 c^4 l^2 m^2 +2a^4 b^4 c^4 l^2 n^2 +2a^4 b^4 c^4 m^2 n^2 }$
+\par $\overline{-2a^4 b^2 c^6 l^2 n^2 +a^4 c^8 n^4 -2a^2 b^8 c^2 m^4 -2a^2 b^6 c^4 m^2 n^2 -2a^2 b^4 c^6 m^2 n^2 -2a^2 b^2 c^8 n^4  }$
+\par $\overline{+b^8 c^4 m^4 +2b^6 c^6 m^2 n^2 +b^4 c^8 n^4}$,\ $\sigma_2 =2a^2 b^2 c^2 {\left(a^2 l^2 +b^2 m^2 +c^2 n^2 \right)},\ \sigma_3 =b^2 c^4 n^2 ,\ \sigma_4 =b^4 c^2 m^2 ,\ \sigma_5 =a^2 c^4 n^2 ,\ \sigma_6 =a^4 c^2 l^2 ,\ \sigma_7 =a^2 b^4 m^2 ,\ \sigma_8 =a^4 b^2 l^2 $.
+\par 有界闭集有最值，所以$\varphi$第一个分量为极小值，第二个分量为极大值。
+
+
+\subsection{18.4.6}
+
+$x^2+y^2+z^2\leq 1,$ 求$x^3+y^3+z^3-2xyz$的最大值和最小值。
+
+设$x^2+y^2+z^2=k,\ k\in[0,1]$,由齐次性，用放缩法可知，取最值时$k=1$.
+\par $g(x,y,z)=x^3+y^3+z^3-2xyz+\lambda(x^2+y^2+z^2-1)$
+\par $\pd{g}{x}=3x^2-2yz+2\lambda x=0,$
+\par $\pd{g}{y}=3y^2-2xz+2\lambda y=0,$
+\par $\pd{g}{z}=3z^2-2xy+2\lambda z=0.$
+\par 可以解得$f(x,y,z)=\left(\frac{19\,\sqrt{6}}{54},\frac{19\,\sqrt{6}}{54},-\frac{19\,\sqrt{6}}{54},-\frac{19\,\sqrt{6}}{54},\frac{\sqrt{3}}{9},-\frac{\sqrt{3}}{9},\frac{19\,\sqrt{6}}{54},-\frac{19\,\sqrt{6}}{54},1,-1,1,-1,1,-1\right)$,其中每一个值为可能的解对应的值，
+\par $\therefore $最大值为$1$，最小值为$-1$.
+
+
+\subsection{18.4.11}
+
+证明：椭圆的哪接三角形中，面积最大的三角形的一顶点的椭圆发现必与三角形的该顶点的对边垂直；并求椭圆中面积最大的内接三角形。
+
+\begin{proof}
+
+	设三点为$(x_1,y_1),\ (x_2,y_2),\ (x_3,y_3).$
+	\par 三角形面积$2S=\begin{vmatrix}
+			x_1-x_2 & y_1-y_2 \\x_1-x_3&y_1-y_3
+		\end{vmatrix}=(x_1-x_2)(y_1-y_3)-(y_1-y_2)(x_1-x_3).$
+	\par $f=(x_1-x_2)(y_1-y_3)-(y_1-y_2)(x_1-x_3)+\sum \limits_{i=1}^3\lambda_i\left(\frac{x_i^2}{a^2}+\frac{y_i^2}{a^2}-1\right)$,
+	\par $\pd{f}{x_1}=y_2-y_3+\frac{2\lambda_1}{a^2}x_1=0,\ \pd{f}{y_1}=x_3-x_2+\frac{2\lambda_1}{b^2}y_1=0.$
+	\par $(x_1,y_1)$处的法线$\bm{n}=\left(\frac{2x_1}{a^2},\frac{2y_1}{b^2}\right)$,由上面两式知$\bm{n}\cdot (x_2-x_3,y_2-y_3)=0$.
+
+\end{proof}
+
+圆内接三角形为正三角形时面积最大，由缩放关系得$S_{\max}=\frac{3\sqrt{3}}{4}ab$.
+
+
+\subsection{18.4.17}
+
+证明椭球面$ax^2+by^2+cz^2+2dxy+2exz+2fyz=1$的最大轴长$l$为如下方程之最大实根：
+\par $\begin{vmatrix}
+		a-\frac{1}{l^2} & d & e \\d&b-\frac{1}{l^2}&f\\e&f&c-\frac{1}{l^2}
+	\end{vmatrix}=0$.
+
+\begin{proof}
+	设$l^2=x^2+y^2+z^2,$
+	\par $f(x,y,z)=2l+\lambda_1\left(ax^2+by^2+cz^2+2dxy+2exz+2fyz\right)+\lambda_2\left(l^2-x^2+y^2+z^2\right),\ (l>0)$.
+	\par $\pd{f}{l}=2+2l\lambda_2,\ \therefore \lambda_2=-\frac{1}{l}.$
+	\par $\pd{f}{x}=2a\lambda_1x+2\lambda_1dy+2\lambda_1ez-2\lambda_2x=0$.
+	\par $\pd{f}{x}x+\pd{f}{y}y+\pd{f}{z}z=l+\lambda_1=0,\ \lambda_1=-l$，代入上式得
+	\par $l\left[\left(a-\frac{1}{l^2}\right)x+dy+ez\right]=0,\ \because l>0$,
+	\par $\therefore A\cdot (x,y,z)^\mathrm{T}=0$.
+	\par $\because$存在三个极值点的非平凡解，
+	\par $\therefore \det{A}=0$.
+\end{proof}
+
+
+
+\subsection{18.2}
+
+设$A=\begin{vmatrix}
+		x_1 & x_2 & x_3 \\y_1&y_2&y_3\\z_1&z_2&z_3
+	\end{vmatrix}$.
+\par 用求条件极值的方法证明：$\abs{A}\leq\left(\sum\limits_{i=1}^3x_i^2\right)\left(\sum\limits_{i=1}^3y_i^2\right)\left(\sum\limits_{i=1}^3z_i^2\right)$.
+
+\begin{proof}
+
+	不失一般性，固定$a=\sqrt{\sum\limits_{i=1}^3x_i^2},\ b=\sqrt{\sum\limits_{i=1}^3y_i^2},\ c=\sqrt{\sum\limits_{i=1}^3z_i^2},$
+	\par $f={A}+\lambda_1\left(a^2-\sum\limits_{i=1}^3x_i^2\right)+\lambda_2\left(b^2-\sum\limits_{i=1}^3y_i^2\right)+\lambda_3\left(c^2-\sum\limits_{i=1}^3z_i^2\right)$.
+	\par $\pd{f}{x_1}=\begin{vmatrix}
+			y_2 & y_3 \\z_2&z_3
+		\end{vmatrix}-2\lambda_1x_1=0.$
+	\par $\therefore \bm{x}  \parallel (\bm{y}\times \bm{z})$.
+	\par $\therefore \bm{x},\ \bm{y},\ \bm{z}$两两正交,又有界闭集上有最大最小值，
+	\par $\therefore -\left(\sum\limits_{i=1}^3x_i^2\right)\left(\sum\limits_{i=1}^3y_i^2\right)\left(\sum\limits_{i=1}^3z_i^2\right) \leq {A}\leq \left(\sum\limits_{i=1}^3x_i^2\right)\left(\sum\limits_{i=1}^3y_i^2\right)\left(\sum\limits_{i=1}^3z_i^2\right)$,
+	\par $\therefore  \abs{A}\leq \left(\sum\limits_{i=1}^3x_i^2\right)\left(\sum\limits_{i=1}^3y_i^2\right)\left(\sum\limits_{i=1}^3z_i^2\right)$.
+
+
+\end{proof}
+
+
+\subsection{18.6}
+
+设 $\sum \limits_{i, j=1}^{n} a_{i j} \xi_{i} \xi_{j}$ 是正定二次型, $u(x) \in C\left(\bar{\Omega}, \mathbb{R}^{1}\right), \Omega$ 是 $\mathbb{R}^{n}$
+中的有界开区域.若 $u \in C^{(2)}(\Omega), u$ 在 $\bar{\Omega}$ 的最小值于 $x_{0} \in \Omega$ 取到， 求证:
+$
+	\left.\sum \limits_{i, j=1}^{n} a_{i j} \frac{\partial^{2} u}{\partial x_{i} \partial x_{j}}\right|_{x=x_{0}} \geqslant 0.
+$
+
+\begin{proof}
+
+	设$A=a_{ij},\ B=\frac{\partial^2u}{\partial x_i\partial x_j}\big|_{x=x_0}$, $A,\ B$对称。
+	\par $A$正定，可表示成$A=P^\mathrm{T}P,\ B$半正定， $\det (P) \not=0$.
+	\par 即证$\mathrm{tr}(AB)\geq 0$，
+	\par $\because \mathrm{tr}(AB)=\mathrm{tr}(BA)$(迹的性质),
+	\par $\therefore \mathrm{tr}(AB)=\mathrm{tr}(P^\mathrm{T}PB)=\mathrm{tr}(PBP^\mathrm{T})\geq 0.$
+
+
+
+
+
+
+\end{proof}
+
+
+\end{document}

@@ -1,0 +1,106 @@
+
+\subsection{1}
+
+$f(x)\in C[-h,h],\ h=\sqrt{\alpha^2+\beta^2+\gamma^2}$,证明：
+\begin{equation}
+	\iint_S f(\alpha x+\beta y+\gamma z) \dif S = 2\pi \int^1_{-1}f(hu)\dif u,
+\end{equation}
+其中$S=x^2+y^2+z^2=1$.
+
+\begin{proof}
+
+	\begin{equation}
+		\left\{
+		\begin{aligned}
+			\xi   & = a_1 x + b_1y + c_1z                    \\
+			\eta  & = a_2 x + b_2y + c_2z                    \\
+			\zeta & = \frac{1}{h}(\alpha x+\beta y+\gamma z)
+		\end{aligned}
+		\right.
+	\end{equation}
+	其中
+	\begin{equation}
+		\begin{pmatrix}
+			a_1              & b_1             & c_1              \\
+			a_2              & b_2             & c_2              \\
+			\frac{\alpha}{h} & \frac{\beta}{h} & \frac{\gamma}{h} \\
+		\end{pmatrix}
+	\end{equation}
+	是单位正交矩阵。令
+	\begin{equation}
+		\xi = \cos \theta \cos \varphi,\quad \eta = \sin \theta \sin \varphi,\quad \zeta = \sin \varphi.\qquad D:\begin{cases}
+			0\leq \theta \leq 2\pi \\
+			-\frac{\pi}{2} \leq \varphi \leq \frac{\pi}{2}
+		\end{cases}
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			\iint_S f(\alpha x+\beta y+\gamma z) \dif S & = \iint_D f(h\zeta)\dif S                                                                                        \\
+			                                            & = \iint_D f(h\zeta)\cos \varphi \dif \theta \dif \varphi                                                         \\
+			                                            & = \int^{2\pi}_{0} \dif \theta  \int^{\frac{\pi}{2}}_{-\frac{\pi}{2}} f(h \sin \varphi)\cos \varphi  \dif \varphi \\
+			                                            & = 2\pi \int^1_{-1}f(hu)\dif u,
+		\end{aligned}
+	\end{equation}
+
+
+
+\end{proof}
+
+\subsection{2}
+
+在无穷大三维空间中，半径为$R$的球面上均匀分布着电荷密度为$\rho$的电荷，求任一空间点的电势。
+
+
+\begin{equation}
+	\left\{
+	\begin{aligned}
+		x & = R\cos \theta \cos \varphi  \\
+		y & = R \sin \theta \cos \varphi \\
+		z & = R\sin \varphi
+	\end{aligned}
+	\right.
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		W(0,0,a) & = \iint_S \frac{\rho \dif S}{\sqrt{x^2+y^2+(z-a)^2}}                                                                                                                                  \\
+		         & = \rho R^2 \int^{2\pi}_0 \dif \theta \int^{\frac{\pi}{2}}_{-\frac{\pi}{2}} \frac{\cos \varphi \dif \varphi}{\sqrt{R^2+a^2-2R\sin \varphi}}                                            \\
+		         & = \rho R^2 \int^{2\pi}_0 \dif \theta \left(-\frac{1}{2Ra}\right) \int^{\frac{\pi}{2}}_{-\frac{\pi}{2}} \frac{\dif \left(R^2+a^2-2R\sin \varphi\right)}{\sqrt{R^2+a^2-2R\sin \varphi}} \\
+		         & =\frac{2\pi\rho R}{a} \sqrt{R^2+a^2-2R\sin \varphi}\bigg|^{-\frac{\pi}{2}}_{\frac{\pi}{2}}                                                                                            \\
+		         & =\frac{2\pi\rho R}{a}\left(R+a-\abs{R-a}\right)=\begin{cases}
+			4\pi R\rho,              & 0<a<R   \\
+			\frac{4\pi R^2}{a}\rho , & a\geq R
+		\end{cases}
+	\end{aligned}
+\end{equation}
+
+\subsection{3}
+
+设 $f(x, y)$ 连续, $L$ 是一封闭的分段光滑简单曲线，设
+\begin{equation}
+	u(x, y)=\oint_{L} f(\xi, \eta) \ln \left(\frac{1}{\sqrt{(x-\xi)^{2}+(y-\eta)^{2}}}\right) \dif s,
+\end{equation}
+证明: $\lim \limits_{x \rightarrow \infty, y \rightarrow \infty} u(x, y)=0$ 的充要条件是 $\oint_{L} f(\xi, \eta) \dif s=0.$
+
+
+\begin{proof}
+
+	$f(x,y)$在$L$上有界，$\abs{f(x,y)}\leq k$，设$L$的长度为$S$。固定一点$(\xi_0,\eta_0)\in \alpha$.
+	\begin{equation}
+		\abs{\ln{\left(\frac{1}{\sqrt{(\xi-x)^2+(\eta-y)^2}}\right)}-\ln{\left(\frac{1}{\sqrt{(\xi_0-x)^2+(\eta_0-y)^2}}\right)}} = \abs{\ln{\left(\frac{\sqrt{(\xi_0-x)^2+(\eta_0-y)^2}}{\sqrt{(\xi-x)^2+(\eta-y)^2}}\right)}}
+	\end{equation}
+	趋于0.
+
+	\begin{equation}
+		u(x,y) = \oint f(\xi, \eta) \ln \left(\frac{1}{\sqrt{(x-\xi_0)^{2}+(y-\eta_0)^{2}}}\right) + f(\xi, \eta)  \ln{\left(\frac{\sqrt{(\xi_0-x)^2+(\eta_0-y)^2}}{\sqrt{(\xi-x)^2+(\eta-y)^2}}\right)} \dif s
+	\end{equation}
+	所以
+	\begin{equation}
+		\abs{u(x,y)- \oint f(\xi, \eta) \ln \left(\frac{1}{\sqrt{(x-\xi_0)^{2}+(y-\eta_0)^{2}}}\right) \dif s} \leq kS\varepsilon
+	\end{equation}
+	又
+	\begin{equation}
+		\oint f(\xi, \eta) \ln \left(\frac{1}{\sqrt{(x-\xi_0)^{2}+(y-\eta_0)^{2}}}\right) \dif s =  \ln \left(\frac{1}{\sqrt{(x-\xi_0)^{2}+(y-\eta_0)^{2}}}\right)\oint f(\xi, \eta) \dif s
+	\end{equation}
+	所以$\lim \limits_{x \rightarrow \infty, y \rightarrow \infty} u(x, y)=0$ 的充要条件是 $\oint_{L} f(\xi, \eta) \dif s=0.$
+
+\end{proof}
