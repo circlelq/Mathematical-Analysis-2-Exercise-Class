@@ -1,0 +1,73 @@
+\subsection{1}
+
+设 $S$ 为椭球面 $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1,\ \vec{r}=x \vec{i}+y \vec{j}+z \vec{k},\ \vec{n}$ 为曲面 $S$ 的单位外法向， $d(x, y, z)$
+表示原点到 $(x, y, z) \in S$ 处切平面的距离，求以下积分:
+\begin{enumerate}
+	\item $\oiint_{S} \vec{r} \cdot \vec{n} \dif \sigma$
+	\item $\oiint_{S} d(x, y, z) \dif \sigma$
+	\item $\oiint_{S} \frac{\dif \sigma}{d(x, y, z)}$
+\end{enumerate}
+
+
+\subsubsection{1}
+
+\begin{equation}
+	\vec{n}=\frac{1}{\sqrt{\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}}}\left(\frac{x}{a^{2}}, \frac{y}{b^{2}}, \frac{z}{c^{2}}\right).
+\end{equation}
+\begin{equation}
+	\oiint_S \vec{n} \cdot \vec{r} \dif \sigma =\iiint \nabla \cdot \vec{r} \dif V=3 V=4 \pi a b c.
+\end{equation}
+
+
+\subsubsection{2}
+
+$\because d = \vec{n} \cdot \vec{r},\ \therefore$
+\begin{equation}
+	\oiint_{S} d(x, y, z) \dif \sigma=4 \pi a b c.
+\end{equation}
+
+
+\subsubsection{3}
+
+\begin{equation}
+	\begin{aligned}
+		\frac{1}{d} & =\sqrt{\frac{x^{2}}{a^{4}}+\frac{y^{2}}{b^{4}}+\frac{z^{2}}{c^{4}}}=\sqrt{\frac{1}{a^{2}} \cos ^{2} \theta \sin ^{2} \varphi+\frac{1}{b^{2}} \sin ^{2} \theta \sin ^{2} \varphi+\frac{1}{c^{2}} \cos ^{2} \varphi} \\
+		            & =\frac{1}{a b c} \sqrt{b^{2} c^{2} \cos ^{2} \theta \sin ^{2}\varphi+a^{2} c \sin ^{2} \theta \sin ^{2} \varphi+a^{2} {b}^{2} \cos ^{2} \varphi}.
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\dif \sigma=\abs{\bm{r}_{\theta}\times\bm{r}_{\varphi}}\dif \theta \dif \varphi=\sqrt{b^{2}c^{2} \cos^{2} \theta \sin ^{4}\varphi + a^{2} c^{2} \sin ^{2} \theta \sin ^{4} \varphi + a^2b^2\sin ^2\varphi \cos ^2 \varphi } \dif \theta \dif \varphi
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		  & \oiint_{S} \frac{\dif \sigma}{d(x, y, z)}                           \\  =&\ \frac{4}{abc}\int^{\frac{\pi}{2}}_0\dif \theta \int^{\pi}_0|\sin \varphi| \left(b^{2}c^{2} \cos^{2} \theta \sin ^{2}\varphi + a^{2} c^{2} \sin ^{2} \theta \sin ^{2} \varphi + a^2b^2 \cos ^2 \varphi \right) \dif \varphi\\
+		= & \ \frac{4\pi}{3abc}\left(a^{2} b^{2}+b^{2} c^{2}+c^{2}a^{2} \right)
+	\end{aligned}
+\end{equation}
+
+
+\subsection{2}
+
+考虑空间 $\mathbb{R}^{3}$ 中在原点电量为 ${Q}$ 的电荷在 $\vec{r}=(x, y, z)$ 处产生的电场: $\vec{E}=\frac{1}{4\pi \varepsilon_0} \frac{{Q} \vec{r}}{r^{3}}$, 这里
+$r=\sqrt{x^{2}+y^{2}+z^{2}}$, 设 $\Omega$ 是 ${R}^{3}$ 的开区域, $\partial \Omega$ 充分光滑， $\vec{n}$ 为 $\Omega$ 的外法向，证明:
+\begin{equation}
+	\oiint_{\partial \Omega} \vec{E} \cdot \vec{n} \dif \sigma=\left\{\begin{array}{ll}0, & (0,0,0) \notin \Omega \\  \frac{Q}{\varepsilon_0}, & (0,0,0) \in \Omega\end{array}\right.
+\end{equation}
+
+\begin{proof}
+	若电荷在$\Omega$内。
+
+	取一个以$\vec{r}=(x, y, z)$为球心的半径为$a$的小球面$S$,使得$S$在$\partial \Omega$内，对于两曲面中间的区域$V$有
+	\begin{equation}
+		\oiint_{\partial \Omega} \vec{E} \cdot \vec{n} \dif \sigma-\oiint_{S} \vec{E} \cdot \vec{n} \dif \sigma=\iiint_V \nabla \cdot \vec{E} \dif v =\iiint_V \nabla \cdot \frac{1}{4\pi \varepsilon_0} \frac{{Q} \vec{r}}{r^{3}} \dif v = 0
+	\end{equation}
+	\begin{equation}
+		\oiint_{\partial \Omega} \vec{E} \cdot \vec{n} \dif \sigma  =\oiint_{S} \vec{E} \cdot \vec{n} \dif \sigma    =\frac{1}{4\pi \varepsilon_0} Q \oiint_S \frac{\vec{r}}{a^3}\cdot \vec{n} \dif \sigma  = \frac{Q}{\varepsilon_0}
+	\end{equation}
+
+	若电荷不在$\Omega$内,则$\Omega$内无暇点。
+	\begin{equation}
+		\oiint_{\partial \Omega} \vec{E} \cdot \vec{n} \dif \sigma=\iiint_{\Omega} \nabla \cdot \frac{1}{4\pi \varepsilon_0} \frac{{Q} \vec{r}}{r^{3}} \dif v = 0
+	\end{equation}
+
+\end{proof}
