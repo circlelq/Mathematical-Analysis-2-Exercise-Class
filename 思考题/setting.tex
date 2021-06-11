@@ -1,0 +1,116 @@
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{esint} % \oiint
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{commath}%定义d
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{paralist}
+\usepackage{multirow}
+\usepackage{booktabs} % To thicken table lines
+\usepackage{diagbox}
+\usepackage{bm}
+\usepackage{authblk}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{amsthm}
+\usepackage{fontspec}
+\usepackage{color}
+\usepackage[perpage]{footmisc}%脚注每页清零
+%\usepackage{txfonts} %设置字体为times new roman
+\usepackage{lettrine}
+\usepackage{nameref}
+%\usepackage[nottoc]{tocbibind}
+\usepackage{amssymb}%font
+\usepackage{lipsum}%make test words
+\usepackage{picinpar}%words around the picture
+\usepackage[all]{xy}%draw arrow
+\usepackage{asymptote}%draw picture
+\usepackage{fontawesome}
+\usepackage{titletoc}
+\usepackage{fourier-orns}
+\usepackage{nameref}
+% \geometry{bottom=4cm}
+\renewcommand{\proofname}{\indent \sf \bfseries{证明}}
+
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\ctexset{today=old}
+\renewcommand\contentsname{Contents}
+\geometry{bottom=3cm,a4paper,left=2.5cm,right=2.5cm,top=3cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+%\lhead{\bfseries\rightmark}
+
+%定义常数i、e、积分符号d
+\newcommand\mi{\mathrm{i}}
+\newcommand\me{\mathrm{e}}
+
+%\setmainfont{Times New Roman}
+
+%\ctexset{today=small}%日期类型设置
+
+% ======================================
+% = Color de la Universidad de Sevilla =
+% ======================================
+\usepackage{tikz}
+\definecolor{PKUred}{RGB}{126,24,28}
+
+%超链接设置
+\usepackage[breaklinks,colorlinks,linkcolor=PKUred,citecolor=PKUred,urlcolor=black,pagebackref,bookmarksnumbered]{hyperref}
+\usepackage{cleveref}
+
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\section}{\LARGE\sffamily\bfseries}{\hspace{-15pt}\textcolor{PKUred}{\vrule width 4pt height 20pt}\hsp\arabic{section}}{10em}{}
+
+\titleformat{\subsection}{\Large\bfseries}{}{-7pt}{}
+
+\titlecontents{section}[0pt]{\addvspace{1pc}%
+    \sffamily}%
+{\contentsmargin{0pt}%
+    \bfseries\makebox[0pt][r]{\Large\thecontentslabel\enspace}%
+}{}
+{} [\addvspace{1pt}]
+
+
+\titlecontents{subsection}
+[0.2em] % ie, 1.5em (chapter) + 2.3em
+{}{} {} {\titlerule*[1pc]{.}\contentspage}
+
+
+
+\iffalse
+    \renewcommand*\footnoterule{%
+        \vspace*{-3pt}%
+        {\color{PKUred}\hrule width 2in height 0.4pt}%
+        \vspace*{2.6pt}%
+    }
+\fi
+\renewcommand*\headrule{%
+    {\color{PKUred}\hrule width \textwidth height 0pt}%
+    \vspace*{2.6pt}%
+}
+
+
+%% Color the bullets of the itemize environment and make the symbol of the third
+%% level a diamond instead of an asterisk.
+%h\renewcommand*\textbullet{\dag}
+\renewcommand*\labelitemi{\color{PKUred}\textbullet}
+\renewcommand*\labelitemii{\color{PKUred}--}
+\renewcommand*\labelitemiii{\color{PKUred}$\diamond$}
+\renewcommand*\labelitemiv{\color{PKUred}\textperiodcentered}
+
+
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}		% Equationnumbering: section.eq#
+\numberwithin{figure}{section}			% Figurenumbering: section.fig#
+\numberwithin{table}{section}				% Tablenumbering: section.tab#

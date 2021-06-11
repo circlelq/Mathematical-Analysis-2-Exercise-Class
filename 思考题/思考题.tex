@@ -1,0 +1,102 @@
+\documentclass[11pt,UTF8]{article}
+\input{setting.tex}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\title{思考题}								% Title
+\author{\emph{袁磊祺}}								% Author
+\date{\ \today}											% Date
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={思考题}
+}
+
+
+\makeatletter
+\let\athetitle\@title
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+
+
+\begin{document}
+
+% \input{setc.tex}
+
+\begin{titlepage}
+	\centering
+	\vspace*{-2 cm}
+	\includegraphics[scale = 0.5]{fig/pkured.pdf}\\[1.0 cm]	% University Logo
+	\textsc{\LARGE Peking University}\\[4.0 cm]	% University Name
+	\textsc{\Large College of Engineering}\\[0.7 cm]				% Course Code
+
+	\rule{\linewidth}{0.5 mm} \\[0.8 cm]
+	{ \huge \bfseries \athetitle}\\[0.4 cm]
+	\rule{\linewidth}{0.5 mm} \\[1 cm]
+	\textsc{\large Mathematical Analysis (2)}\\[6 cm]				% Course Name
+	\centering
+	\large
+	\href{https://github.com/circlelq/Mathematical-Analysis-2-Exercise-Class}{\faGithub}
+	\quad \href{mailto:yuanlqpku@163.com}{\faEnvelope}\quad \theauthor\\[0.5 cm]
+	\thedate\\[2 cm]
+
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+\hypersetup{linkcolor=black}
+\tableofcontents
+}
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+
+
+\section{}
+\input{"../思考题1/答案1.tex"}
+
+\section{}
+\input{"../思考题2/答案2.tex"}
+
+\section{}
+\input{"../思考题3/答案3.tex"}
+
+\section{}
+\input{"../思考题4/答案4.tex"}
+
+\section{}
+\input{"../思考题5/答案5.tex"}
+
+\section{}
+\input{"../思考题6/答案6.tex"}
+
+\section{}
+\input{"../思考题7/答案7.tex"}
+
+\section{}
+\input{"../思考题8/答案8.tex"}
+
+\section{}
+\input{"../思考题9/答案9.tex"}
+
+\section{}
+\input{"../思考题10/答案10.tex"}
+
+\section{}
+\input{"../思考题11/答案11.tex"}
+
+\section{}
+\input{"../思考题12/答案12.tex"}
+
+\section{}
+\input{"../思考题13/答案13.tex"}
+
+\section{}
+\input{"../思考题14/答案14.tex"}
+
+\end{document}

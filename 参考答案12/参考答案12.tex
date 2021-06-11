@@ -171,9 +171,9 @@ $\int_C xy \dif s,\ C$为球面$x^2+y^2+z^2=a^2$与平面$x+y+z=0$之交线。
 
 \begin{equation}
 	\begin{aligned}
-		\int_{0}^{1} \dif x \int_{1- x}^{1} \sqrt{\frac{y}{2 x}+\frac{x}{2 y}+1} \dif y= & \int_{0}^{1} \dif x \int_{1- x}^{1} \frac{x+y}{\sqrt{2 x y}} \dif y                                                              \\
-		=                                                                                & \int_{0}^{1} \dif x \int_{1- x}^{1}\left(\sqrt{\frac{x}{2 y}}+\sqrt{\frac{y}{2 x}}\right) \dif y                                 \\
-		=                                                                                & \left.\int_{0}^{1}\left(\sqrt{\frac{x}{2}} 2 \sqrt{y}+\sqrt{\frac{1}{2 x}} \frac{2}{3} y^{\frac{3}{2}}\right)\right|_{1- x} ^{1} \\
+		\int_{0}^{1} \dif x \int_{1- x}^{1} \sqrt{\frac{y}{2 x}+\frac{x}{2 y}+1} \dif y= & \int_{0}^{1} \dif x \int_{1- x}^{1} \frac{x+y}{\sqrt{2 x y}} \dif y                                                                     \\
+		=                                                                                & \int_{0}^{1} \dif x \int_{1- x}^{1}\left(\sqrt{\frac{x}{2 y}}+\sqrt{\frac{y}{2 x}}\right) \dif y                                        \\
+		=                                                                                & \left.\int_{0}^{1}\left(\sqrt{\frac{x}{2}} 2 \sqrt{y}+\sqrt{\frac{1}{2 x}} \frac{2}{3} y^{\frac{3}{2}}\right)\right|_{1- x} ^{1} \dif x \\
 		=                                                                                & \frac{4\sqrt{2}}{3} - \frac{\sqrt{2}}{4}\pi
 	\end{aligned}
 \end{equation}
@@ -185,8 +185,8 @@ $\int_C xy \dif s,\ C$为球面$x^2+y^2+z^2=a^2$与平面$x+y+z=0$之交线。
 	3\left(x^{2}+y^{2}\right)=(2 a-x-y)^{2} \Rightarrow x^{2}+y^{2}-x y+2 a(x+y)=2 a^{2}
 \end{equation}
 \begin{align}
-	S_{1} & =\iint_{D} \sqrt{1+ z_x^{2}+z_{y}^{2}} \dif x \dif y=2 \iint_{D} \dif x \dif y        \\
-	S_{2} & = \iint_{D} \sqrt{1+ z_x^{2}+z_{y}^{2}}\dif x \dif y=\sqrt{3} \iint_{D} \dif x \dif y
+	\text{平面部分}\quad S_{1} & =\iint_{D} \sqrt{1+ z_x^{2}+z_{y}^{2}} \dif x \dif y=2 \iint_{D} \dif x \dif y        \\
+	\text{曲面部分}\quad S_{2} & = \iint_{D} \sqrt{1+ z_x^{2}+z_{y}^{2}}\dif x \dif y=\sqrt{3} \iint_{D} \dif x \dif y
 \end{align}
 做变量替换
 \begin{equation}
@@ -198,7 +198,7 @@ $x,y$平面内的面积
 \end{equation}
 总面积
 \begin{equation}
-	S=42 a^{2}(2 \sqrt{3}+3)
+	S=4\pi a^{2}(2 \sqrt{3}+3)
 \end{equation}
 体积
 \begin{equation}
